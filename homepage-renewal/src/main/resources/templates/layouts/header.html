@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body th:fragment="header">
+    <div class="header">
+        <a class="logo" href="">
+            <img th:src="@{/images/ITFACTORY_logo_1.png}" />
+            <img th:src="@{/images/ITFACTORY_logo_2.png}" />
+        </a>
+        <nav class="nav">
+            <ul class="main-depth">
+                <li><a href="">회사소개</a>
+                    <ul class="sub-depth">
+                        <li><a href="">인사말</a></li>
+                        <li><a href="">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li><a href="">HACCP 사후관리 시스템</a>
+                </li>
+                <li><a href="">스마트 HACCP</a>
+                </li>
+                <li><a href="">주요실적</a>
+                </li>
+                <li><a href="">고객센터</a>
+                    <ul class="sub-depth">
+                        <li><a href="">최신뉴스</a></li>
+                        <li><a href="">문의사항</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="bg-wrap"></div>
+    </div>
+</body>
+</html>
