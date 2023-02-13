@@ -1,25 +1,48 @@
 /**
  * 전역변수
  */
-const getTest = document.getElementById('getTest');
-const postTest = document.getElementById('postTest');
+// const getTest = document.getElementById('getTest');
+
 
 /**
  * 이벤트함수
  */
 
-getTest.addEventListener('click', () => {
-	let test = document.getElementsByTagName('div')[0].innerHTML;
-	xhr(`./getTest?test=${test}`, null, 'GET', 'getTest');
+// getTest.addEventListener('click', () => {
+// 	let test = document.getElementsByTagName('div')[0].innerHTML;
+// 	xhr(`./getTest?test=${test}`, null, 'GET', 'getTest');
+// });
+
+/** 스크롤 애니메이션*/
+AOS.init();
+
+window.addEventListener('scroll', function() {
+    const posY = this.window.pageYOffset;
+    const section1 = this.document.querySelector('.section-1').getBoundingClientRect().top;
+    const section2 = this.document.querySelector('.section-2').getBoundingClientRect().top;
+    const section3 = this.document.querySelector('.section-3').getBoundingClientRect().top;
+    const section4 = this.document.querySelector('.section-4').getBoundingClientRect().top;
+
+    const section1Top = posY + section1;
+    const section2Top = posY + section2;
+    const section3Top = posY + section3 - 500;
+    const section4Top = posY + section4;
+
+    let totalHeight = document.body.scrollHeight - this.window.innerHeight -1;
+
+    if(posY >= section1Top && posY < section2Top) {
+		this.document.body.style.backgroundColor = "#000"
+    } else if(posY >= section2Top && posY < section3Top) {
+		this.document.body.style.backgroundColor = "linear-gradient(to top, #121212, #000)"
+    } else if(posY >= section3Top && posY < section4Top) {
+		this.document.body.style.backgroundColor = "#fff"
+    } else if(posY >= section4Top && posY <= totalHeight) {
+		this.document.body.style.backgroundColor = "#fff"
+    }
+
 });
 
-postTest.addEventListener('click', () => {
-	const formData = new FormData();
-	let test = document.getElementsByTagName('div')[0].innerHTML;
-	formData.append('test', test);
-	
-	xhr('./postTest', formData, 'POST', 'postTest');
-});
+
 
 /**
  * XMLHttpRequest 성공 함수
@@ -57,3 +80,4 @@ let xhr = (url, formData, method, flag) => {
 	}
 	xhr.send(formData);
 }
+
