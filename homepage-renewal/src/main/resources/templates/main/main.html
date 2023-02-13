@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/main/main.css}">
+</head>
+<body>
+	<div th:text="${main.getTest()}"></div>
+	<button id="getTest">GET 테스트 값 가져오기</button>
+	<button id="postTest">POST 테스트 값 가져오기2</button>
+	
+	
+	
+	
+	<script defer th:src="@{/js/main/main.js}"></script>
+</body>
+</html>

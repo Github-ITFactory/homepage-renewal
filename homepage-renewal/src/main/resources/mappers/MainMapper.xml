@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.homepage.main.mapper.MainMapper" >
+	<select id="test" resultType="com.homepage.main.entity.MainEntity">
+        SELECT 
+        	TEST
+        FROM TEST
+    </select>
+    
+    <select id="getTest" resultType="com.homepage.main.entity.MainEntity">
+        SELECT 
+        	TEST
+        FROM TEST
+        WHERE TEST = #{test}
+    </select>
+    
+    <select id="postTest" resultType="com.homepage.main.entity.MainEntity">
+        SELECT 
+        	TEST
+        FROM TEST
+        WHERE TEST = #{test}
+    </select>
+</mapper>

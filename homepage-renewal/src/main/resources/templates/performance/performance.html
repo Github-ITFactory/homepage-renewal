@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/performance/performance.css}">
+</head>
+<body>
+	<h1>주요실적</h1>
+	<a th:href="@{/performance?part=0&page=1}" style="border: 1px solid black;" id="all">전체</a>
+	<a th:href="@{/performance?part=1&page=1}" style="border: 1px solid black;" id="food">식품부문</a>
+	<a th:href="@{/performance?part=2&page=1}" style="border: 1px solid black;" id="manuf">소재,부품,장비부문</a>
+	<a th:href="@{/performance?part=3&page=1}" style="border: 1px solid black;" id="etc">기타</a>
+	<div th:each="performance : ${performanceList}" style="border: 1px solid black;">
+		<div th:text="${performance.compName}"></div>
+		업종 : <div th:text="${performance.sector}"></div>
+		분야 : <div th:text="${performance.field}"></div>
+		내용 : <div th:text="${performance.detail}"></div>
+	</div>
+	<div>
+		<span th:if="${paging.cri.page != 1}"><a th:href="@{/performance(part=${part},page=${paging.cri.page - 1})}">&lt; 이전페이지</a></span>
+		<span th:each="num : ${#numbers.sequence((paging.startPage), (paging.endPage))}" ><a th:text=${num} th:href="@{/performance(part=${part}, page=${num})}"></a></span>
+		<span th:if="${paging.cri.page != paging.totalCount / paging.cri.perPageNum + 1}"><a th:href="@{/performance(part=${part},page=${paging.cri.page + 1})}">다음페이지 &gt;</a></span>
+	</div>
+	<input type="button" id="performRegist" value="등록" th:if="${userId == 'admin'}">
+<script defer th:src="@{/js/performance/performance.js}"></script>
+<script th:inline="javascript" >
+	const part = [[${part}]];
+</script>
+</body>
+</html>

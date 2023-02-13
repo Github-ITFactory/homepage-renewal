@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/request/request.css}">
+<style>
+	table, th, tr, td {border: 1px solid black; border-collapse: collapse;}
+</style>
+</head>
+<body>
+	<h1>구축의뢰</h1>
+	<table>
+		<tr>
+			<th>문의</th>
+			<th>작성자</th>
+		</tr>
+		<tr th:each="request : ${requestList}" class="tableTr">
+			<td th:text="${request.seq}" style="display: none;"></td>
+			<td th:text="${request.createDt} + ' 문의'"></td>
+			<td th:text="${request.name}"></td>
+		</tr>
+	</table>
+	<div>
+		<span th:if="${paging.cri.page != 1}"><a th:href="@{/request(page=${paging.cri.page - 1})}">&lt; 이전페이지</a></span>
+		<span th:each="num : ${#numbers.sequence((paging.startPage), (paging.endPage))}" ><a th:text=${num} th:href="@{/request(page=${num})}"></a></span>
+		<span th:if="${paging.cri.page != paging.totalCount / paging.cri.perPageNum + 1}"><a th:href="@{/request(page=${paging.cri.page + 1})}">다음페이지 &gt;</a></span>
+	</div>
+	<input type="button" id="requestRegistBtn" value="등록">
+<script defer th:src="@{/js/request/request.js}"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.homepage.performance.mapper.PerformanceMapper" >
+	<select id="performanceList" resultType="com.homepage.performance.entity.PerformanceEntity">
+        SELECT 
+        	COMP_NAME AS compName
+        	,SECTOR AS sector
+        	,FIELD AS field
+        	,DETAIL AS detail
+        	,PART AS part
+        FROM PERFORMANCE
+        WHERE 1=1
+        <if test="part != 0">
+        	AND PART = #{part}
+        </if>
+        LIMIT #{pageStart}, #{perPageNum}
+    </select>
+
+	<insert id="regist" parameterType="com.homepage.performance.entity.PerformanceEntity">
+        INSERT INTO PERFORMANCE
+        (COMP_NAME, SECTOR, FIELD, DETAIL, PART)
+        VALUES
+        (#{compName}, #{sector}, #{field}, #{detail}, #{part})
+    </insert>
+    
+    <select id="performanceListCnt" resultType="com.homepage.performance.vo.PerformanceVO">
+        SELECT 
+        	COUNT(*) AS cnt
+        FROM PERFORMANCE
+        WHERE 1=1
+        <if test="part != 0">
+        	AND PART = #{part}
+        </if>
+    </select>
+</mapper>

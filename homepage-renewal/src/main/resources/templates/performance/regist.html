@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/performance/performance.css}">
+</head>
+<body>
+	회사명 <input type="text" id="compName" name="compName">
+	업종 <input type="text" id="sector" name="sector">
+	분야 <input type="text" id="field" name="field">
+	내용 <input type="text" id="detail" name="detail">
+	부문 
+	<select id="part" name="part">
+		<option value="1">식품부문</option>
+		<option value="2">소재,부품,장비부문</option>
+		<option value="3">기타부문</option>
+	</select>
+	<input type="button" id="registBtn" name="registBtn" value="등록">
+<script defer th:src="@{/js/performance/regist.js}"></script>
+</body>
+</html>
