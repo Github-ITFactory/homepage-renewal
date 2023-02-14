@@ -8,6 +8,11 @@
   <link rel="stylesheet" th:href="@{/css/style.css}">
   <link rel="stylesheet" th:href="@{https://unpkg.com/aos@2.3.1/dist/aos.css}" >
   <link rel="stylesheet" th:href="@{//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css}">
+  <link rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css}"/>
+  
+  <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js}"></script>
+  <script th:src="@{https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js}"></script>
+
 </head>
 
 <body>
@@ -33,7 +38,8 @@
                             <div class="line-1" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1500" >K-HACCP 하나로 쉽고 빠르게</div>
                         </div>
                         <div class="img-conts animate-img">
-                            <img src="../img/section01/Section1_mainbanner01_img.png">
+                            <!-- <img th:src="@{/images/main/Bulb.png}"/> -->
+                            <img th:src="@{images/pages/k_haccp/section01/Section1_mainbanner01_img.png}"/>
                         </div>
                     </div>
                 </div>
@@ -44,7 +50,7 @@
                             <div class="line-1" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1500">내손안의 비서 K-HACCP</div>
                         </div>
                         <div class="img-conts animate-img1">
-                            <img src="../img/section01/Section1_mainbanner02_01.gif">
+                            <img th:src="@{images/pages/k_haccp/section01/Section1_mainbanner02_01.gif}"/>
                         </div>
                     </div>
                 </div>
@@ -74,56 +80,15 @@
                 </div>
             </div>
             <div class="img-conts"  data-aos="fade-up" data-aos-delay="0" data-aos-duration="1500">
-                <img src="../img/section02/Section2_img.png">
+                <img th:src="@{images/pages/k_haccp/section02/Section2_img.png}"/>
             </div>
         </div>
     </div><!-- section02 end-->
-    <!-- section03 start-->
-    <!--<div class="landing-pages-section-03">
-        <div class="container">
-            <div class="hd">
-                <div class="icon"><img src="../img/section03/Section3_icon.png"></div>
-                <div class="title" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">어렵기만 했던 해썹 bye bye !</div>
-                <div class="desc">
-                    <p data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000"><span>이젠, </span><b>휴대폰으로 해썹 알람</b><span>받고</span></p>
-                    <p data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">터치 한 번으로 간편하게 일지관리를 시작해보세요!</p>
-                </div>
-            </div>
-            <div class="bd">
-                <div class="tab-hd"  data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
-                    <div class="tab-btn active">HACCP관리</div>
-                    <div class="tab-btn">이렇게 바뀝니다!</div>
-                </div>
-                <div class="tab-bd"  data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
-                    <div class="tab-cont active">
-                        <div class="landing-pages-section-03-swiper0">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../img/section03/Section3_slide_01/Section3_slide_01_img01.png"></div>
-                                <div class="swiper-slide"><img src="../img/section03/Section3_slide_01/Section3_slide_01_img02.png"></div>
-                                <div class="swiper-slide"><img src="../img/section03/Section3_slide_01/Section3_slide_01_img03.png"></div>
-                                <div class="swiper-slide"><img src="../img/section03/Section3_slide_01/Section3_slide_01_img04.png"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-cont">
-                        <div class="landing-pages-section-03-swiper1">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="../img/section03/Section3_slide_02/Section3_slide_02_img01.png"></div>
-                                <div class="swiper-slide"><img src="../img/section03/Section3_slide_02/Section3_slide_02_img02.png"></div>
-                                <div class="swiper-slide"><img src="../img/section03/Section3_slide_02/Section3_slide_02_img03.png"></div>
-                                <div class="swiper-slide"><img src="../img/section03/Section3_slide_02/Section3_slide_02_img04.png"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>--><!-- section03 end-->
     <!-- section03 수정 start-->
     <div class="landing-pages-section-03">
         <div class="container">
             <div class="hd">
-                <div class="icon"><img src="../img/section03/Section3_icon.png"></div>
+                <div class="icon"><img th:src="@{images/pages/k_haccp/section03/Section3_icon.png}"/></div>
                 <div class="title" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">어렵기만 했던 해썹 bye bye !</div>
                 <div class="desc">
                     <p data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000"><span>이젠, </span><b>휴대폰으로 해썹 알람</b><span>받고</span></p>
@@ -136,19 +101,19 @@
                         <div class="tab-btn active">어려운 HACCP관리</div>
                     </div>
                     <div class="wrapper">
-                        <div class="slide"><img src="../img/section03/Section3_slide_01/Section3_slide_01_img01.png"></div>
-                        <div class="slide"><img src="../img/section03/Section3_slide_01/Section3_slide_01_img02.png"></div>
-                        <div class="slide"><img src="../img/section03/Section3_slide_01/Section3_slide_01_img03.png"></div>
-                        <div class="slide"><img src="../img/section03/Section3_slide_01/Section3_slide_01_img04.png"></div>
+                        <div class="slide"><img th:src="@{images/pages/k_haccp/section03/Section3_slide_01/Section3_slide_01_img01.png}"/></div>
+                        <div class="slide"><img th:src="@{images/pages/k_haccp/section03/Section3_slide_01/Section3_slide_01_img02.png}"/></div>
+                        <div class="slide"><img th:src="@{images/pages/k_haccp/section03/Section3_slide_01/Section3_slide_01_img03.png}"/></div>
+                        <div class="slide"><img th:src="@{images/pages/k_haccp/section03/Section3_slide_01/Section3_slide_01_img04.png}"/></div>
                     </div>
                     <div class="tab-hd"  data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
                         <div class="tab-btn">이렇게 바뀝니다!</div>
                     </div>						
                     <div class="wrapper">
-                        <div class="slide"><img src="../img/section03/Section3_slide_02/Section3_slide_02_img01.png"></div>
-                        <div class="slide"><img src="../img/section03/Section3_slide_02/Section3_slide_02_img02.png"></div>
-                        <div class="slide"><img src="../img/section03/Section3_slide_02/Section3_slide_02_img03.png"></div>
-                        <div class="slide"><img src="../img/section03/Section3_slide_02/Section3_slide_02_img04.png"></div>
+                        <div class="slide"><img th:src="@{images/pages/k_haccp/section03/Section3_slide_02/Section3_slide_02_img01.png}"/></div>
+                        <div class="slide"><img th:src="@{images/pages/k_haccp/section03/Section3_slide_02/Section3_slide_02_img02.png}"/></div>
+                        <div class="slide"><img th:src="@{images/pages/k_haccp/section03/Section3_slide_02/Section3_slide_02_img03.png}"/></div>
+                        <div class="slide"><img th:src="@{images/pages/k_haccp/section03/Section3_slide_02/Section3_slide_02_img04.png}"/></div>
                     </div>
                 </div>
             </div>
@@ -168,13 +133,13 @@
                                     작성해야하는 일지에 대한 <br><b>알람을 미리 받아 언제, 어떤 일지를</b><br><b>작성해야 하는지</b> 알 수 있어요<br>
                                 </div>
                                 <div class="prev-btn">
-                                    <img src="../img/section04/Section4_left_arrow.png">
+                                    <img th:src="@{images/pages/k_haccp/section04/Section4_left_arrow.png}"/>
                                 </div>
                                 <div class="next-btn">
-                                    <img src="../img/section04/Section4_right_arrow.png">
+                                    <img th:src="@{images/pages/k_haccp/section04/Section4_right_arrow.png}"/>
                                 </div>
                                 <div class="img-conts">
-                                    <img src="../img/section04/Section4_icon01.png">
+                                    <img th:src="@{images/pages/k_haccp/section04/Section4_icon01.png}"/>
                                 </div>
                             </div>
                         </div>
@@ -185,13 +150,13 @@
                                     모든 HACCP 일지 <b>작성 방법과</b><br><b>맞춤형 가이드를 제공</b>해줘요
                                 </div>
                                 <div class="prev-btn">
-                                    <img src="../img/section04/Section4_left_arrow.png">
+                                    <img th:src="@{images/pages/k_haccp/section04/Section4_left_arrow.png}"/>
                                 </div>
                                 <div class="next-btn">
-                                    <img src="../img/section04/Section4_right_arrow.png">
+                                    <img th:src="@{images/pages/k_haccp/section04/Section4_right_arrow.png}"/>
                                 </div>
                                 <div class="img-conts">
-                                    <img src="../img/section04/Section4_icon02.png">
+                                    <img th:src="@{images/pages/k_haccp/section04/Section4_icon02.png}"/>
                                 </div>
                             </div>
                         </div>
@@ -201,13 +166,13 @@
                                 <div class="conts">
                                     작업 시 선행되어야 하는<br>요건에 대한 <b>일지를</b><br><b>작성하고 관리</b>할 수 있어요 <br></div>
                                 <div class="prev-btn">
-                                    <img src="../img/section04/Section4_left_arrow.png">
+                                    <img th:src="@{images/pages/k_haccp/section04/Section4_left_arrow.png}"/>
                                 </div>
                                 <div class="next-btn">
-                                    <img src="../img/section04/Section4_right_arrow.png">
+                                    <img th:src="@{images/pages/k_haccp/section04/Section4_right_arrow.png}"/>
                                 </div>
                                 <div class="img-conts">
-                                    <img src="../img/section04/Section4_icon03.png">
+                                    <img th:src="@{images/pages/k_haccp/section04/Section4_icon03.png}"/>
                                 </div>
                             </div>
                         </div>
@@ -216,13 +181,13 @@
                                 <div class="title">CCP일지</div>
                                 <div class="conts">모든 CCP일지를 작성하고<br>관리할 수 있어요</div>
                                 <div class="prev-btn">
-                                    <img src="../img/section04/Section4_left_arrow.png">
+                                    <img th:src="@{images/pages/k_haccp/section04/Section4_left_arrow.png}"/>
                                 </div>
                                 <div class="next-btn">
-                                    <img src="../img/section04/Section4_right_arrow.png">
+                                    <img th:src="@{images/pages/k_haccp/section04/Section4_right_arrow.png}"/>
                                 </div>
                                 <div class="img-conts">
-                                    <img src="../img/section04/Section4_icon04.png">
+                                    <img th:src="@{images/pages/k_haccp/section04/Section4_icon04.png}"/>
                                 </div>
                             </div>
                         </div>
@@ -231,13 +196,13 @@
                                 <div class="title">원료수불부</div>
                                 <div class="conts">원료 입고 및 사용, 제품 생산,<br>거래 기록서와 재고를 파악하고<br>관리할 수 있어요</div>
                                 <div class="prev-btn">
-                                    <img src="../img/section04/Section4_left_arrow.png">
+                                    @{<img th:src="images/pages/k_haccp/section04/Section4_left_arrow.png">}
                                 </div>
                                 <div class="next-btn">
-                                    <img src="../img/section04/Section4_right_arrow.png">
+                                    @{<img th:src="images/pages/k_haccp/section04/Section4_right_arrow.png">}
                                 </div>
                                 <div class="img-conts">
-                                    <img src="../img/section04/Section4_icon05.png">
+                                    @{<img th:src="images/pages/k_haccp/section04/Section4_icon05.png">}
                                 </div>
                             </div>
                         </div> -->
@@ -246,13 +211,13 @@
                                 <div class="title">전자결재</div>
                                 <div class="conts">사용자는 결재를 등록하고<br>결재자는 결재함에 등록된<br>결재를 처리할 수 있어요</div>
                                 <div class="prev-btn">
-                                    <img src="../img/section04/Section4_left_arrow.png">
+                                    <img th:src="@{images/pages/k_haccp/section04/Section4_left_arrow.png}"/>
                                 </div>
                                 <div class="next-btn">
-                                    <img src="../img/section04/Section4_right_arrow.png">
+                                    <img th:src="@{images/pages/k_haccp/section04/Section4_right_arrow.png}"/>
                                 </div>
                                 <div class="img-conts">
-                                    <img src="../img/section04/Section4_icon06.png">
+                                    <img th:src="@{images/pages/k_haccp/section04/Section4_icon06.png}"/>
                                 </div>
                             </div>
                         </div>
@@ -261,13 +226,13 @@
                                 <div class="title">기타일지</div>
                                 <div class="conts">HACCP일지, 보건증, 검교정,<br>교육훈련일지 등 회사에 필요한<br>서류를 첨부하거나 보관할 수 있어요</div>
                                 <div class="prev-btn">
-                                    <img src="../img/section04/Section4_left_arrow.png">
+                                    <img th:src="@{images/pages/k_haccp/section04/Section4_left_arrow.png}"/>
                                 </div>
                                 <div class="next-btn">
-                                    <img src="../img/section04/Section4_right_arrow.png">
+                                    <img th:src="@{images/pages/k_haccp/section04/Section4_right_arrow.png}"/>
                                 </div>
                                 <div class="img-conts">
-                                    <img src="../img/section04/Section4_icon07.png">
+                                    <img th:src="@{images/pages/k_haccp/section04/Section4_icon07.png}"/>
                                 </div>
                             </div>
                         </div>
@@ -276,13 +241,13 @@
                                 <div class="title">전문행정사 일지검토 컨설팅 서비스</div>
                                 <div class="conts">HACCP 전문행정사의  철저한<br>일지검토를 통해 안정적이면서 <br>더욱 효율적으로 관리할 수 있어요</div>
                                 <div class="prev-btn">
-                                    <img src="../img/section04/Section4_left_arrow.png">
+                                    @{<img th:src="images/pages/k_haccp/section04/Section4_left_arrow.png">}
                                 </div>
                                 <div class="next-btn">
-                                    <img src="../img/section04/Section4_right_arrow.png">
+                                    @{<img th:src="images/pages/k_haccp/section04/Section4_right_arrow.png">}
                                 </div>
                                 <div class="img-conts">
-                                    <img src="../img/section04/Section4_icon08.png">
+                                    @{<img th:src="images/pages/k_haccp/section04/Section4_icon08.png">}
                                 </div>
                             </div>
                         </div> -->
@@ -302,22 +267,22 @@
             </div>
             <div class="bd">
                 <div class="item" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
-                    <div class="icon"><img src="../img/section05/Section5_icon01.png"></div>
+                    <div class="icon"><img th:src="@{images/pages/k_haccp/section05/Section5_icon01.png}"/></div>
                     <div class="title">특허 출원 완료</div>
                     <div class="desc">유일무이한 독보적인 플랫폼</div>
                 </div>
                 <div class="item" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
-                    <div class="icon"><img src="../img/section05/Section5_icon02.png"></div>
+                    <div class="icon"><img th:src="@{images/pages/k_haccp/section05/Section5_icon02.png}"/></div>
                     <div class="title">전문가 합작 설계</div>
                     <div class="desc">400여개 업체의 해썹인증을<br>진행한 전문가와 합작</div>
                 </div>
                 <div class="item" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
-                    <div class="icon"><img src="../img/section05/Section5_icon03.png"></div>
+                    <div class="icon"><img th:src="@{images/pages/k_haccp/section05/Section5_icon03.png}"/></div>
                     <div class="title">사후관리 완벽 솔루션</div>
                     <div class="desc">해썹 관리에 대한 니즈를<br>완벽하게 반영한 솔루션</div>
                 </div>
                 <div class="item" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
-                    <div class="icon"><img src="../img/section05/Section5_icon04.png"></div>
+                    <div class="icon"><img th:src="@{images/pages/k_haccp/section05/Section5_icon04.png}"/></div>
                     <div class="title">안전한 데이터 관리</div>
                     <div class="desc">NHN 클라우드 데이터<br> 관리로 철저한 보안</div>
                 </div>
@@ -344,12 +309,12 @@
                             </div>
                         </div>
                         <div class="img-conts right" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">
-                            <img src="../img/section06/Section6_img01.png">
+                            <img th:src="@{images/pages/k_haccp/section06/Section6_img01.png}"/>
                         </div>
                     </div>
                     <div class="item">
                         <div class="img-conts left" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
-                            <img src="../img/section06/Section6_img02.png">
+                            <img th:src="@{images/pages/k_haccp/section06/Section6_img02.png}"/>
                         </div>
                         <div class="text-conts right">
                             <div class="title" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">기초등록 설정</div>
@@ -406,7 +371,7 @@
                             </div>
                         </div>
                         <div class="img-conts right" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
-                            <img src="../img/section06/Section6_img03.png">
+                            <img th:src="@{images/pages/k_haccp/section06/Section6_img03.png}"/>
                         </div>
                     </div>
                 </div>
@@ -575,10 +540,10 @@
                 <div class="desc">K-HACCP 플랫폼을 통해  효율적이고 간편하게 <br>HACPP 사후관리를 시작해보세요.</div>
             </div>
             <div class="barcode-conts" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-                <img src="../img/section08/Section8_QRcode.png">
+                <img th:src="@{images/pages/k_haccp/section08/Section8_QRcode.png}"/>
             </div>
             <div class="img-conts" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
-                <img src="../img/section08/Section8_img.png">
+                <img th:src="@{images/pages/k_haccp/section08/Section8_img.png}"/>
             </div>
         </div>
     </div><!-- section08 end-->
@@ -681,52 +646,52 @@
 //								}
 //						}, options);
 //						observer.observe(document.getElementsByClassName("landing-pages-section-03-swiper0")[0]);
-            // section04
-            var section04 = new Swiper(".landing-pages-section-04-swiper", {
+    // section04
+    var section04 = new Swiper(".landing-pages-section-04-swiper", {
+            slidesPerView: 4,
+            speed: 1000,
+            loop:true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false // 쓸어 넘기거나 버튼 클릭 시 자동 슬라이드 정지.
+                },
+            spaceBetween: 0,
+            grabCursor: true,
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                },
+                // when window width is >= 480px
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 0
+                },
+                // when window width is >= 640px
+                640: {
                     slidesPerView: 4,
-                    speed: 1000,
-                    loop:true,
-                    centeredSlides: true,
-                    autoplay: {
-                        delay: 3000,
-                        disableOnInteraction: false // 쓸어 넘기거나 버튼 클릭 시 자동 슬라이드 정지.
-                        },
-                    spaceBetween: 0,
-                    grabCursor: true,
-                    breakpoints: {
-                        // when window width is >= 320px
-                        320: {
-                            slidesPerView: 1,
-                            spaceBetween: 0
-                        },
-                        // when window width is >= 480px
-                        480: {
-                            slidesPerView: 2,
-                            spaceBetween: 0
-                        },
-                        // when window width is >= 640px
-                        640: {
-                            slidesPerView: 4,
-                            spaceBetween: 0
-                        }
-                        }
-                });
-            $('.landing-pages-section-04-swiper .prev-btn').click(function(){
-                section04.slidePrev()
-            })
-            $('.landing-pages-section-04-swiper .next-btn').click(function(){
-                section04.slideNext()
-            })
-            //section07
-            $('.landing-pages-section-07 .bd .item').click(function(){
-                console.log($(this).hasClass('active'))
-                if($(this).hasClass('active')){
-                    $(this).removeClass('active')
-                }else{
-                    $(this).addClass('active')
-                    $(this).siblings().removeClass('active')
+                    spaceBetween: 0
                 }
-            })
+                }
+        });
+    $('.landing-pages-section-04-swiper .prev-btn').click(function(){
+        section04.slidePrev()
+    })
+    $('.landing-pages-section-04-swiper .next-btn').click(function(){
+        section04.slideNext()
+    })
+    //section07
+    $('.landing-pages-section-07 .bd .item').click(function(){
+        console.log($(this).hasClass('active'))
+        if($(this).hasClass('active')){
+            $(this).removeClass('active')
+        }else{
+            $(this).addClass('active')
+            $(this).siblings().removeClass('active')
+        }
+    })
     $(".app").click(function(){
         $(".appPop").animate({"bottom":"0px"});
     })
