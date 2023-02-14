@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>아이티팩토리</title>
+  <link rel="stylesheet" th:href="@{/css/pages/smart_haccp.css}">
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <link rel="stylesheet" th:href="@{https://unpkg.com/aos@2.3.1/dist/aos.css}" >
+  <link rel="stylesheet" th:href="@{//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css}">
+</head>
+
+<body>
+  <th:block th:replace="~{layouts/header :: header}"></th:block>
+  
+  <th:block th:replace="~{layouts/footer :: footer}"></th:block>
+  <script defer th:src="@{/js/layouts/header.js}"></script>
+  <script defer th:src="@{/js/main/main.js}"></script>
+  <script th:src="@{https://unpkg.com/aos@2.3.1/dist/aos.js}"></script>
+</body>
+
+
+</html>
