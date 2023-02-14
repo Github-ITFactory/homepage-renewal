@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-HomepageApplication<homepage-renewal>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.homepage.HomepageApplication",
+            "projectName": "homepage-renewal",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

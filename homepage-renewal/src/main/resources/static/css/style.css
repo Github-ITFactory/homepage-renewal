@@ -47,6 +47,7 @@ a {
 }
 .header.scrollDown { 
   background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 5px rgba(139, 139, 139, 0.2);
 }
 .header.scrollDown a { 
   color: #333;
@@ -115,7 +116,7 @@ a {
   transform: translateX(-50%);
   bottom: 0;
   width: 0;
-  height: 2px;
+  height: 3px;
   background: #F57E25;
   transition: .2s ease;
 }
@@ -154,7 +155,8 @@ a {
   left: 0;
   height: 40px;
   background: rgba(255,255,255,0.9);
-  border-top: 1px solid rgb(207, 207, 207);
+  border-top: 1px solid rgba(207, 207, 207, 0.5);
+  box-shadow: 0 2px 2px rgba(139, 139, 139, 0.2);
   z-index: -1;
   transition: 0.3 ease-in-out;
   display: none;
