@@ -8,15 +8,506 @@
   <link rel="stylesheet" th:href="@{/css/style.css}">
   <link rel="stylesheet" th:href="@{https://unpkg.com/aos@2.3.1/dist/aos.css}" >
   <link rel="stylesheet" th:href="@{//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css}">
+  <link rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css}"/>
+  <link rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css}">
 </head>
 
 <body>
   <th:block th:replace="~{layouts/header :: header}"></th:block>
+  <section id="slider" class="section-1">
+    <h3>S M A R T 　 H A C C P</h3>
+    <img th:src="@{images/pages/smart_haccp/smart_haccp.jpg}" alt="background-images">
+    <span><i class="xi-long-arrow-down"></i></span>
+  </section>
+  <div id="overflow">
+    <div class="container-fluid" style="background:#f5f5f5; border-bottom:1px solid #e1e1e1;">
+      <div class="container" style="max-width:1200px;margin:0 auto;display:flex;">
+      </div>
+    </div>
+    <div class="it_wrap container">
+      <!-- <div class="floating" style="display:none;">
+        <a href="https://play.google.com/store/apps/details?id=com.itfactory.haccpfree" target="_blank" id="floating">
+          <img th:src="@{images/pages/smart_haccp/app.png" alt="app다운로드">
+        </a>
+        <span class="mobile floating_close">X</span>
+      </div> -->
+      <section class="main">
+        <div class="main_left">
+          <img th:src="@{images/pages/smart_haccp/main.png}" alt="스마트HACCP PC 목업"/>
+        </div>
+        <div class="main_right">
+          <div class="main_tit">
+            <h2>스마트 HACCP</h2>
+            <img th:src="@{images/pages/smart_haccp/main_simbol.png}" alt="스마트HACCP 심볼로고"/>
+          </div>
+          <span>
+            (주)아이티팩토리의 스마트 HACCP 솔루션은<br class="pc">
+            한국식품안전관리원에서 제공하는 표준 모듈을 적용하여<br class="pc">
+            스마트 HACCP 심사기준에 적합한 서비스를 제공합니다.
+          </span>
+          <span style="font-weight:700;color:#f06d02;">※ 식품의약품안전처 데이터 연동이 없습니다.<br> 아이티팩토리 클라우드에 데이터가 저장됩니다.</span>
+        </div>
+      </section>
+      
+      <section class="app" style="display:none;">
+        <div class="app_wrap">
+          <p>스마트HACCP <span>프리버전</span> 👍 다운로드<br>모바일 및 태블릿에서도 사용해보세요.</p>
+          <div class="app_box">
+            <a class="and" id="and" href="https://play.google.com/store/apps/details?id=com.itfactory.haccpfree" target="_blank">
+              <i class="ri-google-play-fill"></i>
+              <span>Play Store</span>
+            </a>
+            <div class="qr">
+              <i class="ri-qr-scan-2-line"></i>
+              <span>QR코드</span>
+              <img th:src="@{images/pages/smart_haccp/qrcode_4560237_.png}" class="qrcode" alt="qr코드"/>
+            </div>
+          </div>
+          <!-- <div class="app_box">
+            <div class="ios">
+              <i class="ri-app-store-fill"></i>
+              <span>App Store</span>
+            </div>
+          </div> -->
+        </div>
+      </section>
   
-  <th:block th:replace="~{layouts/footer :: footer}"></th:block>
+      <section class="flow">
+        <div class="tit">
+          <span class="tit01">Flow chart</span>
+          <h4 class="tit02">업무 흐름도</h4>
+        </div>
+        <div class="content flow_content">
+          <img th:src="@{images/pages/smart_haccp/flow.png}" alt="업무흐름도"/>
+        </div>
+      </section>
+  
+      <section class="asto">
+        <div class="asto_left">
+          <div class="tit">
+            <span class="tit01">As-is</span>
+            <h4 class="tit02">기존 HACCP</h4>
+          </div>
+          <div class="content asto_content">
+            <div class="asto_box">
+              <div class="asto_icon"><i class="ri-edit-line"></i></div>
+              <p>CCP 수기관리<br>및 관리 누락↑</p>
+            </div>
+            <div class="asto_box">
+              <div class="asto_icon"><i class="ri-file-reduce-line"></i></div>
+              <p>선행요건<br>관리 누락↑</p>
+            </div>
+            <div class="asto_box">
+              <div class="asto_icon"><i class="ri-stack-line"></i></div>
+              <p>복잡한<br>문서 작업</p>
+            </div>
+          </div>
+        </div>
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        width="72px" height="42px" viewBox="0 0 82 52" enable-background="new 0 0 82 52" xml:space="preserve">
+          <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0" y1="26" x2="29.5601" y2="26">
+          <stop  offset="0" style="stop-color:#2F973E"/>
+          <stop  offset="1" style="stop-color:#2F973E"/>
+          </linearGradient>
+          <polygon fill="url(#SVGID_1_)" points="29.56,26 14.78,52 0,52 14.78,26 0,0 14.78,0 	"/>
+          <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="26.2197" y1="26" x2="55.7803" y2="26">
+          <stop  offset="0" style="stop-color:#2F973E"/>
+          <stop  offset="1" style="stop-color:#214C8A"/>
+          </linearGradient>
+          <polygon fill="url(#SVGID_2_)" points="55.78,26 40.999,52 26.22,52 40.999,26 26.22,0 40.999,0 	"/>
+          <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="52.4395" y1="26" x2="82" y2="26">
+          <stop  offset="0" style="stop-color:#214C8A"/>
+          <stop  offset="1" style="stop-color:#214C8A"/>
+          </linearGradient>
+          <polygon fill="url(#SVGID_3_)" points="82,26 67.219,52 52.439,52 67.219,26 52.439,0 67.219,0 	"/>
+        </svg>
+        <div class="asto_right">
+          <div class="tit">
+            <span class="tit01">To-be</span>
+            <h4 class="tit02">스마트 HACCP</h4>
+          </div>
+          <div class="content asto_content">
+            <div class="asto_box">
+              <div class="asto_icon"><i class="ri-cpu-line"></i></div>
+              <p>CCP 자동관리<br>모니터링</p>
+            </div>
+            <div class="asto_box">
+              <div class="asto_icon"><i class="ri-file-search-line"></i></div>
+              <p>선행요건<br>모니터링</p>
+            </div>
+            <div class="asto_box">
+              <div class="asto_icon"><i class="ri-file-cloud-line"></i></div>
+              <p>CCP 문서<br>시스템화</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="effect">
+        <div class="tit">
+          <span class="tit01">Introduction effect</span>
+          <h4 class="tit02">스마트 HACCP 도입효과</h4>
+        </div>
+        <div class="content effect_content swiper01">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide effect_box slide-top01">
+              <div class="effect_num">01</div>
+              <p>HACCP 관리비용 절감</p>
+              <span>합리적인 초기구축비용</span>
+              <span>저렴한 유지관리비용</span>
+              <span>CCP공정자동화에 따른<br><span class="blue">기록관리 인원 감축</span></span>
+            </div>
+            <div class="swiper-slide effect_box slide-top02">
+              <div class="effect_num">02</div>
+              <p>문서작업 간소화</p>
+              <span>CCP작업일지 기록 결재전산화</span>
+              <span>HACCP 문서관리로<br><span class="blue">업무량 감소, 생산성 향상</span></span>
+            </div>
+            <div class="swiper-slide effect_box slide-top03">
+              <div class="effect_num">03</div>
+              <p><img th:src="@{images/pages/smart_haccp/effect03.png}" alt="스마트HACCP 로고"> 인증서 발급 지원</p>
+              <span>스마트공장 수준 확인서 발급지원</span>
+              <span>자체관리시스템 구축으로<br><span class="blue">스마트 HACCP 인증</span></span>
+            </div>
+            <div class="swiper-slide effect_box slide-top01">
+              <div class="effect_num">04</div>
+              <p>식품안전관리체계 강화</p>
+              <span>HACCP 관리 신뢰성 제고</span>
+              <span>CCP 자동기록관리 및 모니터링으로<br><span class="blue">한계점 이탈 시 즉시 개선조치 가능</span></span>
+            </div>
+            <div class="swiper-slide effect_box slide-top02">
+              <div class="effect_num">05</div>
+              <p>데이터 활용성 제고</p>
+              <span>전산화 데이터를 통한<br><span class="blue">빅데이터 분석 및 예측형 식품안전방안 수립</span></span>
+            </div>
+            <div class="swiper-slide effect_box slide-top03">
+              <div class="effect_num">06</div>
+              <p>HACCP 학습 관리</p>
+              <span class="blue">HACCP 기준서 및 표준 플랫폼 제공</span>
+            </div>
+          </div>
+          <div class="swiper-pagination01"></div>
+        </div>
+      </section>
+  
+      <section class="function">
+        <div class="tit">
+          <span class="tit01">Main function</span>
+          <h4 class="tit02">스마트 HACCP 주요기능</h4>
+        </div>
+        <div class="content function_content">
+          <div class="function_box">
+            <div class="function_tit">
+              <i class="ri-file-text-line"></i>
+              중요관리점<br class="pc"> (CCP) 일지
+            </div> 
+            <p>
+              01. 냉장·냉동 관리<br><br>
+              02. 가열 관리<br><br>
+              03. 금속검출 관리
+            </p>
+          </div>
+          <div class="function_box">
+            <div class="function_tit">
+              <i class="ri-file-text-line"></i>
+              선행요건<br class="pc"> 일지
+            </div>
+            <p>
+              01. 위생·시설 점검 일지<br>
+              <i class="ri-more-2-line"></i><br>
+              07. 해충 관리<br>
+              <i class="ri-more-2-line"></i><br>
+              20. 작업장 청정도 관리
+            </p>
+          </div>
+          <div class="function_box">
+            <div class="function_tit">
+              <i class="ri-file-upload-line"></i>
+              전자<br class="pc"> 결재
+            </div>
+            <p>
+              <i class="ri-user-line"></i>담당자 작성<br><br>
+              <i class="ri-arrow-down-line"></i><br><br>
+              <i class="ri-user-settings-line"></i>관리자 결재
+            </p>
+          </div>
+        </div>
+      </section>
+  
+      <section class="bigdata">
+        <div class="tit">
+          <span class="tit01">Big data/AI solution</span>
+          <h4 class="tit02">식품제조분야 빅데이터/AI 솔루션</h4>
+        </div>
+        <div class="content">
+          <div class="bigdata_box">
+            <h3 class="bigdata_tit">불량 사전예측 AI 분석</h3>
+            <span class="bigdata_txt">
+              원료 초분광 이미지 및 완제품 품질 데이터 상관분석을 통한 불량 사전예측 솔루션
+            </span>
+          </div> 
+          <div class="bigdata_box">
+            <h3 class="bigdata_tit">용해 공정 최적화 AI 분석 솔루션</h3>
+            <span class="bigdata_txt">
+              용해공정(온도, 교반속도, 수분함유량, 점도)데이터<br class="mobile">
+              + 완제품 불량 데이터 분석을 통한 최적 공정조건 도출
+            </span>
+          </div> 
+          <div class="bigdata_box">
+            <h3 class="bigdata_tit">상태기반 AI 예지보전 솔루션</h3>
+            <span class="bigdata_txt">
+              생산설비 모터 진동데이터 분석을 통한 이상 징후 사전예측 솔루션
+            </span>
+          </div>
+          <div class="bigdata_box">
+            <h3 class="bigdata_tit">살균공정 최적화 AI 분석 솔루션</h3>
+            <span class="bigdata_txt">
+              살균공정(온도, 가열시간, 교반속도)데이터<br class="mobile">
+              + 완제품 품질(풍미, 살균상태) 데이터 분석을 통한 최적 공정조건 도출
+            </span>
+          </div>
+          <div class="bigdata_box">
+            <h3 class="bigdata_tit">이물검출 고도화 AI 분석 솔루션</h3>
+            <span class="bigdata_txt">
+              이미지 데이터 딥러닝을 통한	이물인식률 제고 솔루션
+            </span>
+          </div>
+        </div>
+      </section>
+  
+      <section class="point01">
+        <div class="tit">
+          <span class="tit01">CCP 실시간 모니터링</span>
+          <h4 class="tit02">중요관리점(CCP) 데이터를<br class="mobile"> 실시간으로<br class="pc"> 자동수집·저장하고<br class="mobile"> 검토·결재 가능</h4>
+        </div>
+        <div class="content">
+          <img th:src="@{images/pages/smart_haccp/point01.png}" alt="ccp 실시간 모니터링" data-aos="fade-up" data-aos-duration="1000"/>
+        </div>
+      </section>
+  
+      <section class="cloud">
+        <div class="cloud_box">
+          <div class="cloud_left">
+            <i class="ri-cloud-fill"></i>
+            <h4>클라우드를 통해<br>데이터를 안전하게 보관</h4>
+            <span>※식품의약품안전처 데이터 연동 없음</span>
+          </div>
+          <div class="cloud_right">
+            <img th:src="@{images/pages/smart_haccp/cloud.png}" alt="클라우드 이미지"/>
+          </div>
+        </div>
+      </section>
+  
+      <section class="point02">
+        <div class="tit">
+          <span class="tit01">HACCP 관리 전산화</span>
+          <h4 class="tit02">CCP일지, 선행요건일지,<br>분석/평가자료 등 전산관리 가능</h4>
+        </div>
+        <div class="content">
+          <div class="point02_left">
+            <img th:src="@{images/pages/smart_haccp/point02-1.png}" alt="HACCP 관리 전산화" data-aos="fade-down-right" data-aos-duration="1000"/>
+          </div>
+          <div class="point02_right">
+            <img th:src="@{images/pages/smart_haccp/point02-2.png}" alt="HACCP 관리 전산화" data-aos="fade-down-left" data-aos-duration="1000"/>
+          </div>
+        </div>
+      </section>
+  
+      <section class="solution">
+        <div class="tit">
+          <span class="tit01">기업성장과 함께하는</span>
+          <h4 class="tit02">스마트HACCP 솔루션</h4>
+        </div>
+        <div class="content">
+          <div class="text_wrap">
+            <div class="text_box">
+              <ul class="text_left" data-aos="fade-right" data-aos-duration="1000">
+                <li class="text_emj"><img th:src="@{images/pages/smart_haccp/emj01.png}" alt="이모지"/></li>
+                <li class="text_tit">
+                  HACCP 관리 간소화 및<br>
+                  스케줄 관리가 필요하다면?
+                </li>
+              </ul>
+              <ul class="text_right" data-aos="fade-left" data-aos-duration="2000">
+                <li class="text_txt text_txt01">
+                  스마트HACCP 라이트
+                </li>
+              </ul>
+            </div>
+            <div class="text_box">
+              <ul class="text_left" data-aos="fade-right" data-aos-duration="1000">
+                <li class="text_emj"><img th:src="@{images/pages/smart_haccp/emj02.png}" alt="이모지"/></li>
+                <li class="text_tit">
+                  HACCP 관리 간소화 및<br>
+                  스케줄 관리가 필요하다면?
+                </li>
+              </ul>
+              <ul class="text_right" data-aos="fade-left" data-aos-duration="2000">
+                <li class="text_txt text_txt02">
+                  스마트HACCP 스탠다드
+                </li>
+              </ul>
+            </div>
+            <div class="text_box">
+              <ul class="text_left" data-aos="fade-right" data-aos-duration="1000">
+                <li class="text_emj"><img th:src="@{images/pages/smart_haccp/emj01.png}" alt="이모지"/></li>
+                <li class="text_tit">
+                  사업확장에 따른 생산설비와 함께<br>
+                  스마트제조시스템 도입을 원한다면?
+                </li>
+              </ul>
+              <ul class="text_right" data-aos="fade-left" data-aos-duration="2000">
+                <li class="text_txt text_txt03">
+                  스마트HACCP 엔터프라이즈
+                </li>
+              </ul>
+            </div>
+            <div class="text_box">
+              <ul class="text_left" data-aos="fade-right" data-aos-duration="1000">
+                <li class="text_emj"><img th:src="@{images/pages/smart_haccp/emj02.png}" alt="이모지"/></li>
+                <li class="text_tit">
+                  데이터에 기반한 지능형 공장을<br>
+                  구축하고 싶다면?
+                </li>
+              </ul>
+              <ul class="text_right" data-aos="fade-left" data-aos-duration="2000">
+                <li class="text_txt text_txt04">
+                  빅데이터/AI 솔루션
+                </li>
+              </ul>
+            </div>
+          </div>
+  <!--
+          <div class="solution_wrap">
+            <div class="solution_box">
+              <ul class="solution_tit">
+                <li class="sol01">구분</li>
+                <li class="sol02">프리(무료)</li>
+                <li class="sol03">라이트</li>
+                <li class="sol04">스탠다드</li>
+                <li class="sol05">엔터프라이즈</li>
+              </ul>
+              <ul class="solution01">
+                <li class="sol01">
+                  기기지원
+                </li>
+                <li class="sol02">
+                  <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M7 4v16h10V4H7zM6 2h12a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm6 15a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>모바일(앱)</p>
+                </li>
+                <li class="sol03">
+                  <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M7 4v16h10V4H7zM6 2h12a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm6 15a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>모바일(앱)</p>
+                  <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M4 16h16V5H4v11zm9 2v2h4v2H7v-2h4v-2H2.992A.998.998 0 0 1 2 16.993V4.007C2 3.451 2.455 3 2.992 3h18.016c.548 0 .992.449.992 1.007v12.986c0 .556-.455 1.007-.992 1.007H13z"/></svg>PC(웹)</p>
+                </li>
+                <li class="sol04">
+                  <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M7 4v16h10V4H7zM6 2h12a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm6 15a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>모바일(앱)</p>
+                  <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M4 16h16V5H4v11zm9 2v2h4v2H7v-2h4v-2H2.992A.998.998 0 0 1 2 16.993V4.007C2 3.451 2.455 3 2.992 3h18.016c.548 0 .992.449.992 1.007v12.986c0 .556-.455 1.007-.992 1.007H13z"/></svg>PC(웹)</p>
+                </li>
+                <li class="sol05">
+                  <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M7 4v16h10V4H7zM6 2h12a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm6 15a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>모바일(앱)</p>
+                  <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path fill="none" d="M0 0h24v24H0z"/><path d="M4 16h16V5H4v11zm9 2v2h4v2H7v-2h4v-2H2.992A.998.998 0 0 1 2 16.993V4.007C2 3.451 2.455 3 2.992 3h18.016c.548 0 .992.449.992 1.007v12.986c0 .556-.455 1.007-.992 1.007H13z"/></svg>PC(웹)</p>
+                </li>
+              </ul>
+              <ul class="solution02">
+                <li class="sol01">User 수</li>
+                <li class="sol02">2명</li>
+                <li class="sol03">10명</li>
+                <li class="sol04">10명</li>
+                <li class="sol05">제한 없음</li>
+              </ul>
+              <ul class="solution03">
+                <li class="sol01">주요 기능</li>
+                <li class="sol03">
+                  <p>HACCP 관리 문서 전산화 및 CCP 일지 모니터링,</p>
+                  <p>전자 결재 시스템(CCP일지 / 선행요건일지),</p>
+                  <p>관리항목 스케줄 알림</p>
+                </li>
+                <li class="sol04">
+                  <p style="color:#009944;font-weight:900;">라이트</p>
+                  <p>+</p>
+                  <p>CCP 자동기록관리</p>
+                  <p>※스마트HACCP 인증요건</p>
+                </li>
+                <li class="sol05">
+                  <p style="color:#100964;font-weight:900;">스탠다드</p>
+                  <p>+</p>
+                  <p>식품공장 맞춤형</p>
+                  <p>제조실행시스템(MES)</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+  -->
+        </div>
+      </section>
+  
+      <section class="performance">
+        <div class="tit">
+          <span class="tit01">Performance</span>
+          <h4 class="tit02">스마트 HACCP 구축사례</h4>
+        </div>
+        <div class="content" id="performance_content"></div>
+      </section>
+  
+  
+      <section class="manual" style="display:none;">
+        <div class="tit">
+          <span class="tit01">Manual Download</span>
+          <h4 class="tit02">매뉴얼 다운로드</h4>
+        </div>
+        <div class="content">
+          <div class="txt">
+            <p>· <span>스마트HACCP 프리(무료)버전</span> 사용 매뉴얼입니다.</p>
+            <p>· 본 매뉴얼의 내용으로 표시된 해당 기능 및 서비스는 성능 개선을 위해<br class="pc"> 사전 고지 없이 변경될 수 있으며, 실제 프로그램의 기능과 차이가 있을 수 있습니다.</p>
+          </div>
+          <div class="manual_wrap">
+            <!-- <div class="leaflet_box admin">
+              <i class="ri-settings-5-line"></i>
+              <p>관리자 매뉴얼</p>
+              <a href="http://www.it-factory.co.kr/manual/smarthaccp_manual_admin.pdf" target="_blank" download><i class="ri-download-2-line"></i> PDF</a>
+            </div>
+            <div class="leaflet_box simple">
+              <i class="ri-user-line"></i>
+              <p>사용자 매뉴얼</p>
+              <a href="http://www.it-factory.co.kr/manual/smarthaccp_manual_user.pdf" target="_blank" download><i class="ri-download-2-line"></i> PDF</a>
+            </div> -->
+            <div class="leaflet_box simple">
+              <i class="ri-user-line"></i>
+              <p>야미 사용 매뉴얼</p>
+              <a href="<?php echo G5_URL; ?>/pages/manual/manual.pdf" target="_blank" download><i class="ri-download-2-line"></i> PDF</a>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="leaflet">
+        <div class="tit">
+          <span class="tit01">Leaflet Download</span>
+          <h4 class="tit02">리플릿 다운로드</h4>
+        </div>
+        <div class="content">
+          <div class="leaflet_wrap">
+            <div class="leaflet_box">
+              <i class="ri-file-list-2-line"></i>
+              <p>스마트HACCP 리플릿 9p</p>
+              <a href="<?php echo G5_URL; ?>/pages/manual/smarthaccp_leaflet_9p.pdf" target="_blank" download><i class="ri-download-2-line"> </i>PDF</i></a>
+            </div>
+            <div class="leaflet_box">
+              <i class="ri-file-list-2-line"></i>
+              <p>스마트HACCP 리플릿</p>
+              <a href="<?php echo G5_URL; ?>/pages/manual/smarthaccp_leaflet.pdf" target="_blank" download><i class="ri-download-2-line"></i> PDF</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <th:block th:replace="~{layouts/footer :: footer}"></th:block>
+  </div>
   <script defer th:src="@{/js/layouts/header.js}"></script>
-  <script defer th:src="@{/js/main/main.js}"></script>
+  <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js}"></script>
+  <script th:src="@{https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js}"></script>
   <script th:src="@{https://unpkg.com/aos@2.3.1/dist/aos.js}"></script>
+  <script th:src="@{/js/pages/smart_haccp.js}"></script>
+  <script th:src="@{/js/pages/smart_haccp_performance.js}"></script>
 </body>
 
 

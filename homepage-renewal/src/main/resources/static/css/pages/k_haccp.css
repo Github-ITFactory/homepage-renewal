@@ -6,11 +6,11 @@ div[class^="landing-pages-section"] {
 	font-size: 100%;
 }
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-    box-sizing: border-box;
-    width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+  width: 100%;
 }
 #gnb #gnb_1dul a {
 	font-weight: 600!important;
