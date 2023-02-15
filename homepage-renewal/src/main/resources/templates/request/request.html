@@ -9,6 +9,7 @@
 </style>
 </head>
 <body>
+	<th:block th:replace="~{layouts/header :: header}"></th:block>
 	<h1>구축의뢰</h1>
 	<table>
 		<tr>
@@ -27,6 +28,10 @@
 		<span th:if="${paging.cri.page != paging.totalCount / paging.cri.perPageNum + 1}"><a th:href="@{/request(page=${paging.cri.page + 1})}">다음페이지 &gt;</a></span>
 	</div>
 	<input type="button" id="requestRegistBtn" value="등록">
+<th:block th:replace="~{layouts/footer :: footer}"></th:block>
 <script defer th:src="@{/js/request/request.js}"></script>
+<script th:inline="javascript">
+	const session = [[${session.userId}]];
+</script>
 </body>
 </html>
