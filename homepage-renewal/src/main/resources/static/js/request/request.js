@@ -19,7 +19,11 @@ for(let i = 0; i < tableTr.length; i++) {
 	tableTr[i].addEventListener('click', (e) => {
 		let seq = e.target.parentElement.children[0].innerText;
 		
-		window.location.href = "/request/password?seq=" + seq;
+		if(session === 'admin') {
+			window.location.href = '/request/detail?seq=' + seq;
+		} else {
+			window.location.href = "/request/password?seq=" + seq;			
+		}
 	});
 }
 

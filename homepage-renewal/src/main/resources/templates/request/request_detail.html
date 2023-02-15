@@ -9,6 +9,7 @@
 </style>
 </head>
 <body>
+	<th:block th:replace="~{layouts/header :: header}"></th:block>
 	<h1>구축의뢰</h1>
 	<input type="hidden" id="seq" th:value="${seq}">
 	<table>
@@ -40,10 +41,11 @@
 			<td th:text="${requestEntity.orgFileNm}" id="downFile"></td>
 		</tr>
 	</table>
+<th:block th:replace="~{layouts/footer :: footer}"></th:block>
 <script defer th:src="@{/js/request/request_detail.js}"></script>
 <script>
 	(function() {
-		if("[[${session.passwordCheck}]]" !== "success") {
+		if("[[${session.passwordCheck}]]" !== "success" && "[[${session.userId}]]" !== 'admin') {
 			window.location.href = "/request/password?seq=[[${seq}]]"; 
 		}
 	})();

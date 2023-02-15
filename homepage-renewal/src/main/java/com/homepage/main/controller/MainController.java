@@ -27,46 +27,7 @@ public class MainController {
 	@RequestMapping("/")
 	public ModelAndView main() {
 		ModelAndView modelAndView = new ModelAndView("main/main");
-        MainEntity main = mainService.test();
-		
-        modelAndView.addObject("main", main);
         
         return modelAndView;
     }
-	
-	@SuppressWarnings("unchecked")
-	@GetMapping("/getTest")
-	@ResponseBody
-	public String getTest(@RequestParam(value = "test", required = false) String test) {
-		JSONObject responseObject = new JSONObject();
-		MainEntity mainEntity = this.mainService.getTest(test);
-		
-		if(mainEntity != null) {
-			responseObject.put("mainEntity", mainEntity.getTest());
-			responseObject.put("result", CommonResult.SUCCESS.name().toLowerCase());
-		} else {
-			responseObject.put("result", CommonResult.FAILURE.name().toLowerCase());
-		}
-		
-        
-        return responseObject.toString();
-	}
-	
-	@SuppressWarnings("unchecked")
-	@PostMapping("/postTest")
-	@ResponseBody
-	public String postTest(@RequestParam(value = "test", required = false) String test) {
-		JSONObject responseObject = new JSONObject();
-		MainEntity mainEntity = this.mainService.postTest(test);
-		
-		if(mainEntity != null) {
-			responseObject.put("mainEntity", mainEntity.getTest());
-			responseObject.put("result", CommonResult.SUCCESS.name().toLowerCase());
-		} else {
-			responseObject.put("result", CommonResult.FAILURE.name().toLowerCase());
-		}
-		
-        
-        return responseObject.toString();
-	}
 }
