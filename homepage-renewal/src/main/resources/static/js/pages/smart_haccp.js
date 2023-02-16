@@ -47,20 +47,20 @@ $(document).ready(function(){
 })
 
 let ovf, slider;
+    $(function(){
+        ovf = this.getElementById("overflow");
+        slider = this.getElementById("slider");
+        winResize();
+        $(window).bind({resize: winResize, scroll: winScroll});
+    });
+    function winResize(){
+        ovf.style.top = slider.offsetHeight + "px";
+    }
 
-$(function(){
-ovf = this.getElementById("overflow");
-slider = this.getElementById("slider");
-winResize();
-$(window).bind({resize: winResize, scroll: winScroll});
-});
-function winResize(){
-ovf.style.top = slider.offsetHeight + "px";
-}
-// function winScroll(){
-// let op = 1 - (window.pageYOffset / slider.offsetHeight);
-// slider.style.opacity = op;
-// }
+    function winScroll(){
+        ovf.style.opacity = 1;
+    }
+
 
 function createSmarthaccp(){
     var strDOM = "";

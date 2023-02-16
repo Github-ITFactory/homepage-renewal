@@ -9,14 +9,24 @@
   <link rel="stylesheet" th:href="@{https://unpkg.com/aos@2.3.1/dist/aos.css}">
   <link rel="stylesheet" th:href="@{//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css}">
   <link rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css}" />
-
-  <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js}"></script>
-  <script th:src="@{https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js}"></script>
-
 </head>
 
 <body>
   <th:block th:replace="~{layouts/header :: header}"></th:block>
+  <section id="slider" class="title-section">
+    <h3><b>K-HACCP</b><br> 해썹 관리, 어려움을 느꼈다면<br>사용해보세요 </h3>
+    <img th:src="@{images/pages/k_haccp/k_haccp.jpg}" alt="background-images">
+    <span><i class="xi-long-arrow-down"></i></span>
+    <div class="direct-wrap">
+      <div class="direct-btn">
+        <a th:href="@{http://k-haccp.btsi.co.kr/haccp.do}">K-HACCP 바로가기</a>
+      </div>
+      <div class="direct-btn">
+        <a id="appDown">앱 다운로드</a>
+      </div>
+    </div>
+  </section>
+  <div id="overflow">
   <!-- landing page start -->
   <!-- section01 start-->
   <div class="landing-pages-section-01">
@@ -58,9 +68,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="direct-btn">
-      <a href="http://k-haccp.btsi.co.kr/haccp.do">K-HACCP 바로가기</a>
     </div>
   </div><!-- section01 end-->
   <!-- section02 start-->
@@ -599,10 +606,33 @@
     </div>
   </div>
   <th:block th:replace="~{layouts/footer :: footer}"></th:block>
+  </div>
   <script defer th:src="@{/js/layouts/header.js}"></script>
+  <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js}"></script>
+  <script th:src="@{https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js}"></script>
   <script>
     $("document").ready(function () {
       AOS.init()
+
+      let ovf, slider;
+      $(function(){
+        ovf = this.getElementById("overflow");
+        slider = this.getElementById("slider");
+        winResize();
+        $(window).bind({resize: winResize, scroll: winScroll});
+        // if(part !== '0') {
+        // 	window.scrollTo(0, window.innerHeight - 70);
+        // }
+      });
+      function winResize(){
+        ovf.style.top = slider.offsetHeight + "px";
+      }
+      function winScroll(){
+        // var op = 1 - (window.pageYOffset / slider.offsetHeight);
+        // slider.style.opacity = op;
+        ovf.style.opacity = 1;
+      }
+
 
       //section01
       const section01 = new Swiper('.landing-pages-swiper-01', {
@@ -737,6 +767,19 @@
         $(".appPop").animate({ "bottom": "-500px" });
       })
 
+    });
+    
+    $('#appDown').click(function() {
+      let filter = "win16|win32|win64|mac";
+      let varUA = navigator.userAgent.toLowerCase();
+0
+      if ( varUA.indexOf('android') > -1) {
+        window.location.href = "https://play.google.com/store/apps/details?id=com.itfactory.haccpfree";
+	    } else if ( varUA.indexOf("iphone") > -1||varUA.indexOf("ipad") > -1||varUA.indexOf("ipod") > -1 ) {
+        window.location.href = "https://apps.apple.com/kr/app/k-haccp/id6443481602";
+		  } else {
+        window.location.href = "https://play.google.com/store/apps/details?id=com.itfactory.haccpfree";
+      }
     });
   </script>
   <script th:src="@{https://unpkg.com/aos@2.3.1/dist/aos.js}"></script>
