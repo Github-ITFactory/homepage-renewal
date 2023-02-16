@@ -59,11 +59,11 @@
         AND SEQ = #{seq}
     </select>
     
-    <insert id="updateFile" parameterType="com.homepage.request.entity.RequestEntity">
+    <update id="updateFile" parameterType="com.homepage.request.entity.RequestEntity">
         UPDATE REQUEST
         SET FILE_NM = #{fileNm}
 		,ORG_FILE_NM = #{orgFileNm}
 		,FILE_PATH = #{filePath}
 		WHERE SEQ = #{seq}
-    </insert>
+    </update>
 </mapper>

@@ -1,49 +1,26 @@
 /**
  * 전역변수
  */
-const registBtn = document.getElementById('registBtn');
+const noticeModify = document.getElementById('noticeModify');
+const noticeList = document.getElementById('noticeList');
+const seq = document.getElementById('seq').value;
 
 /**
  * 이벤트함수
  */
-registBtn.addEventListener('click', () => {
-	const formData = new FormData();
-	let title = document.getElementById('title').value;
-	let contents = CKEDITOR.instances.contents.getData();
-	
-	if(title === "") {
-		alert('제목을 입력해주세요.');
-		return false;
-	} else if(contents === "") {
-		alert('내용을 입력해주세요.');
-		return false;
-	}
-	
-	formData.append('title', title);
-	formData.append('contents', contents);
-	
-	xhr('./regist', formData, 'POST', 'regist');
+noticeModify.addEventListener('click', () => {
+	window.location.href = "/notice/notice_modify?seq=" + seq;
 });
 
-/**
- * 사용자함수
- */
-window.onload = function(){
-	ck = CKEDITOR.replace("contents", {
-		height:500
-	});
-};
-
-CKEDITOR.config.resize_enabled = false;
+noticeList.addEventListener('click', () => {
+	window.location.href = "/notice?page=1";
+});
 
 /**
  * XMLHttpRequest 성공 함수
  */
 let successXhr = (responseObject, flag) => {
-	if(flag === 'regist') {
-		alert('등록이 완료되었습니다.');
-		window.location.href = "/notice?page=1";
-	}
+
 }
 
 /**

@@ -17,4 +17,29 @@
         ORDER BY SEQ DESC
         LIMIT #{pageStart}, #{perPageNum}
     </select>
+    
+    <insert id="regist" parameterType="com.homepage.notice.entity.NoticeEntity">
+        INSERT INTO NOTICE
+        (TITLE, CONTENTS, CREATE_DT)
+        VALUES
+        (#{title}, #{contents}, NOW())
+    </insert>
+    
+    <select id="noticeDetail" resultType="com.homepage.notice.entity.NoticeEntity">
+        SELECT 
+        	SEQ AS seq
+        	,TITLE AS title
+        	,CONTENTS AS contents
+        	,CREATE_DT AS createDt
+        FROM NOTICE
+        WHERE 1=1
+        AND SEQ = #{seq}
+    </select>
+    
+    <update id="notice_modify" parameterType="com.homepage.notice.entity.NoticeEntity">
+        UPDATE NOTICE
+        SET TITLE = #{title}
+		,CONTENTS = #{contents}
+		WHERE SEQ = #{seq}
+    </update>
 </mapper>

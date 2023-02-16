@@ -15,6 +15,12 @@ for(let i = 0; i < tableTr.length; i++) {
 	tableTr[i].addEventListener('mouseout', (e) => {
 		e.target.parentElement.classList.remove("mouseover");
 	});
+	
+	tableTr[i].addEventListener('click', (e) => {
+		let seq = e.target.parentElement.children[0].innerText;
+		
+		window.location.href = '/notice/notice_detail?seq=' + seq;
+	});
 }
 
 if(noticeRegist != null) {
