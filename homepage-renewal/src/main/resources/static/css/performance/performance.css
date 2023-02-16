@@ -1,4 +1,66 @@
-@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#slider {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+#slider img {
+  position: absolute;
+  width: 100%;
+}
+
+#overflow {
+  width: 100%;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+}
+
+
+.title-section h3 {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  letter-spacing: -.2rem;
+  font-size: 7rem;
+  color: rgba(255, 255, 255, 1);
+  z-index: 1;
+  animation: fadein 2s linear both;
+  font-family: 'Do Hyeon', sans-serif;
+}
+.title-section b {
+  display: block;
+  position: relative;
+  font-size: 4rem;
+}
+.title-section b::after {
+  position: absolute;
+  content: '';
+  top: -3rem;
+  left: -1rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f06d02;
+}
+.title-section span {
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  transform: translateX(-50%);
+  font-size: 8rem;
+  color: #fff;
+  animation: moving .5s cubic-bezier(0.63, -0.1, 1, 0.44) infinite alternate-reverse;
+}
+
+
+@keyframes moving {
+  0% { transform: translateY(-2rem); }
+  100% { transform: translateY(0rem); }
+}
+
 
 .clicked {
 	background-color: red;
