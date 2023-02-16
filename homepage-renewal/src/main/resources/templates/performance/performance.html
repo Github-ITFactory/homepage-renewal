@@ -16,22 +16,25 @@
 		<span><i class="xi-long-arrow-down"></i></span>
 	</section>
 	<div id="overflow">
-		<div class="content">
-			<h1>주요실적</h1>
-			<a th:href="@{/performance?part=0&page=1}" style="border: 1px solid black;" id="all">전체</a>
-			<a th:href="@{/performance?part=1&page=1}" style="border: 1px solid black;" id="food">식품부문</a>
-			<a th:href="@{/performance?part=2&page=1}" style="border: 1px solid black;" id="manuf">소재,부품,장비부문</a>
-			<a th:href="@{/performance?part=3&page=1}" style="border: 1px solid black;" id="etc">기타</a>
-			<div th:each="performance : ${performanceList}" style="border: 1px solid black;">
-				<div th:text="${performance.compName}"></div>
-				업종 : <div th:text="${performance.sector}"></div>
-				분야 : <div th:text="${performance.field}"></div>
-				내용 : <div th:text="${performance.detail}"></div>
+		<div class="contents">
+			<div class="contents-list">
+				<a th:href="@{/performance?part=0&page=1}" id="all">전체</a>
+				<a th:href="@{/performance?part=1&page=1}" id="food">식품부문</a>
+				<a th:href="@{/performance?part=2&page=1}" id="manuf">소재,부품,장비부문</a>
+				<a th:href="@{/performance?part=3&page=1}" id="etc">기타</a>
 			</div>
-			<div>
-				<span th:if="${paging.cri.page != 1}"><a th:href="@{/performance(part=${part},page=${paging.cri.page - 1})}">&lt; 이전페이지</a></span>
+			<div class="contents-items-wrap">
+				<div th:each="performance : ${performanceList}" class="content-item">
+					<div th:text="${performance.compName}" class="item-title"></div>
+					<span>업종 :</span> <div th:text="${performance.sector}"></div>
+					<span>분야 :</span> <div th:text="${performance.field}"></div>
+					<span>내용 :</span> <div th:text="${performance.detail}"></div>
+				</div>
+			</div>
+			<div class="paging">
+				<span th:if="${paging.cri.page != 1}"><a th:href="@{/performance(part=${part},page=${paging.cri.page - 1})}">←　  이전페이지</a></span>
 				<span th:each="num : ${#numbers.sequence((paging.startPage), (paging.endPage))}" ><a th:text=${num} th:href="@{/performance(part=${part}, page=${num})}"></a></span>
-				<span th:if="${paging.cri.page != paging.totalCount / paging.cri.perPageNum + 1}"><a th:href="@{/performance(part=${part},page=${paging.cri.page + 1})}">다음페이지 &gt;</a></span>
+				<span th:if="${paging.cri.page != paging.totalCount / paging.cri.perPageNum + 1}"><a th:href="@{/performance(part=${part},page=${paging.cri.page + 1})}">다음페이지 　→</a></span>
 			</div>
 			<input type="button" id="performRegist" value="등록" th:if="${userId == 'admin'}">
 		</div>

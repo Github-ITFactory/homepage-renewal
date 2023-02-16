@@ -21,7 +21,7 @@ $(function(){
 	ovf = this.getElementById("overflow");
 	slider = this.getElementById("slider");
 	winResize();
-	$(window).bind({resize: winResize});
+	$(window).bind({resize: winResize, scroll: winScroll});
 	if(part !== '0') {
 		window.scrollTo(0, window.innerHeight - 70);
 	}
@@ -29,19 +29,26 @@ $(function(){
 function winResize(){
 	ovf.style.top = slider.offsetHeight + "px";
 }
+function winScroll(){
+	ovf.style.opacity = 1;
+	}
 
 
 /**
  * 사용자 함수
  */
 if(part === '0') {
-	all.style.backgroundColor = 'red';
+	all.style.borderColor = '#f06d02';
+	all.style.color = '#f06d02';
 } else if(part === '1') {
-	food.style.backgroundColor = 'red';
+	food.style.borderColor = '#f06d02';
+	food.style.color = '#f06d02';
 } else if(part === '2') {
-	manuf.style.backgroundColor = 'red';
+	manuf.style.borderColor = '#f06d02';
+	manuf.style.color = '#f06d02';
 } else if(part === '3') {
-	etc.style.backgroundColor = 'red';
+	etc.style.borderColor = '#f06d02';
+	etc.style.color = '#f06d02';
 }
 
 
