@@ -18,13 +18,16 @@ if(performRegist != null) {
 
 let ovf, slider;
 $(function(){
-ovf = this.getElementById("overflow");
-slider = this.getElementById("slider");
-winResize();
-$(window).bind({resize: winResize, scroll: winScroll});
+	ovf = this.getElementById("overflow");
+	slider = this.getElementById("slider");
+	winResize();
+	$(window).bind({resize: winResize});
+	if(part !== '0') {
+		window.scrollTo(0, window.innerHeight - 70);
+	}
 });
 function winResize(){
-ovf.style.top = slider.offsetHeight + "px";
+	ovf.style.top = slider.offsetHeight + "px";
 }
 
 
