@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/notice/notice_regist.css}">
+</head>
+<body>
+	<h1>공지사항 등록</h1>
+	<input type="text" id="title" placeholder="제목">
+	<textarea id="contents" name="contents" placeholder="내용"></textarea>
+	<input type="button" id="registBtn" value="등록">
+<script defer th:src="@{/js/notice/notice_regist.js}"></script>
+<script src="//cdn.ckeditor.com/4.20.1/full/ckeditor.js"></script>
+</body>
+</html>

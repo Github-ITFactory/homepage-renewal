@@ -6,4 +6,15 @@
         	COUNT(*) as cnt
         FROM NOTICE
     </select>
+    
+    <select id="noticeList" resultType="com.homepage.notice.entity.NoticeEntity">
+        SELECT 
+        	SEQ AS seq
+        	,TITLE AS title
+        	,CONTENTS AS contents
+        	,CREATE_DT AS createDt
+        FROM NOTICE
+        ORDER BY SEQ DESC
+        LIMIT #{pageStart}, #{perPageNum}
+    </select>
 </mapper>

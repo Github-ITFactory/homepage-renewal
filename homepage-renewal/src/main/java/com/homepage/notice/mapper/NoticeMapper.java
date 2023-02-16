@@ -9,4 +9,6 @@ import com.homepage.notice.vo.NoticeVO;
 @Mapper
 public interface NoticeMapper {
 	NoticeVO noticeListCnt();
+	
+	NoticeEntity[] noticeList(@Param(value = "pageStart") int pageStart, @Param(value = "perPageNum") int perPageNum);
 }

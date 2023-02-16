@@ -43,6 +43,17 @@ public class NoticeController {
 		
         int pageStart = cri.getPageStart();
 		int perPageNum = cri.getPerPageNum();
+		
+		NoticeEntity[] noticeList = this.noticeService.noticeList(pageStart, perPageNum);
+		modelAndView.addObject("noticeList", noticeList);
+		modelAndView.addObject("paging", paging);
+		
+        return modelAndView;
+    }
+	
+	@RequestMapping("/notice_regist")
+	public ModelAndView request_regist() {
+		ModelAndView modelAndView = new ModelAndView("notice/notice_regist");
         
         return modelAndView;
     }

@@ -1,27 +1,21 @@
 /**
  * 전역변수
  */
-const tableTr = document.getElementsByClassName('tableTr');
-const noticeRegist = document.getElementById('noticeRegist');
 
 /**
  * 이벤트함수
  */
-for(let i = 0; i < tableTr.length; i++) {
-	tableTr[i].addEventListener('mouseover', (e) => {
-		e.target.parentElement.classList.add("mouseover");
-	});
-	
-	tableTr[i].addEventListener('mouseout', (e) => {
-		e.target.parentElement.classList.remove("mouseover");
-	});
-}
 
-if(noticeRegist != null) {
-	noticeRegist.addEventListener('click', () => {
-		window.location.href = "/notice/notice_regist";
+/**
+ * 사용자함수
+ */
+window.onload = function(){
+	ck = CKEDITOR.replace("contents", {
+		height:500
 	});
-}
+};
+
+CKEDITOR.config.resize_enabled = false;
 
 /**
  * XMLHttpRequest 성공 함수

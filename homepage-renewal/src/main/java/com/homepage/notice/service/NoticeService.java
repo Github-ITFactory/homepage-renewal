@@ -20,4 +20,8 @@ public class NoticeService {
 	public NoticeVO noticeListCnt() {
 		return this.noticeMapper.noticeListCnt();
 	}
+	
+	public NoticeEntity[] noticeList(int pageStart, int perPageNum) {
+		return this.noticeMapper.noticeList(pageStart, perPageNum);
+	}
 }
