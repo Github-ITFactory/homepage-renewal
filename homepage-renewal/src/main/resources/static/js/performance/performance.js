@@ -22,8 +22,8 @@ $(function(){
 	slider = this.getElementById("slider");
 	winResize();
 	$(window).bind({resize: winResize, scroll: winScroll});
-	if(part !== '0') {
-		window.scrollTo(0, window.innerHeight - 70);
+	if(slide !== 'no') {
+		window.scrollTo(0, window.innerHeight - 70);		
 	}
 });
 function winResize(){
@@ -31,7 +31,7 @@ function winResize(){
 }
 function winScroll(){
 	ovf.style.opacity = 1;
-	}
+}
 
 
 /**

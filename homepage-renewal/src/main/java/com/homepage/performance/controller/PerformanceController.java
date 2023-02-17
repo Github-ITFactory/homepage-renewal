@@ -32,7 +32,7 @@ public class PerformanceController {
     }
 	
 	@RequestMapping("")
-	public ModelAndView main(@SessionAttribute(value = "userId", required = false) String userId, @RequestParam(value = "part", required = false) String part, @RequestParam(value = "page", required = false) int page) {
+	public ModelAndView main(@SessionAttribute(value = "userId", required = false) String userId, @RequestParam(value = "part", required = false) String part, @RequestParam(value = "page", required = false) int page, @RequestParam(value = "slide", required = false) String slide) {
 		ModelAndView modelAndView = new ModelAndView("performance/performance");
 		PerformanceVO performanceVO = this.performanceService.performanceListCnt(part);
 		
@@ -54,6 +54,7 @@ public class PerformanceController {
 		}
 		modelAndView.addObject("part", part);
 		modelAndView.addObject("paging", paging);
+		modelAndView.addObject("slide", slide);
         
         return modelAndView;
     }
