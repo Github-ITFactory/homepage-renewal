@@ -6,6 +6,7 @@ const all = document.getElementById('all');
 const food = document.getElementById('food');
 const manuf = document.getElementById('manuf');
 const etc = document.getElementById('etc');
+const pageNum = document.getElementsByClassName('pageNum');
 
 /**
  * 이벤트함수
@@ -51,6 +52,11 @@ if(part === '0') {
 	etc.style.color = '#f06d02';
 }
 
+for(let i = 0; i < pageNum.length; i++) {
+	if(pageNum[i].innerText == page) {
+		pageNum[i].classList.add('on');
+	}
+}
 
 /**
  * XMLHttpRequest 성공 함수

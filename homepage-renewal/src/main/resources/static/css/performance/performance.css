@@ -138,3 +138,7 @@
 .clicked {
 	background-color: #f06d02;
 }
+
+.on {
+	color: #f06d02 !important;
+}
