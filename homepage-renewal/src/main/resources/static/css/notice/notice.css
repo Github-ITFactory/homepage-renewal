@@ -64,37 +64,50 @@ table, th, tr, td {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding: 15rem 0 5rem;
+	padding: 15rem 1.5rem 5rem;
 	width: 50%;
 	height: 100%;
+}
+.container .contents input[type='button'] {
+	margin: 5rem 2rem 1rem auto;
+	width: 100px;
+	line-height: 2;
+	font-size: 1.8rem;
+	border-style: none;
+	border: 1px solid #e0e0e0;
+	border-radius: 3rem;
+	color: #e0e0e0;
+	background: none;
+	cursor: pointer;
 }
 .container .contents table {
 	width: 100%;
 }
 .container .contents table td {
 	padding: 0 2rem;
-	line-height: 7rem;
+	line-height: 10rem;
 	border-bottom: 2px solid #ffffff18;
 	border-collapse: collapse; 
-	transition: .3s ease-in;
+	transition: .3s cubic-bezier(0.42, 0, 0.15, 0.84);
 }
 .container .contents table tr {
-	transition: .3s ease-in;
-}
-.container .contents table tr:hover {
-	background: #0a0d2c;
+	transition:.3s cubic-bezier(0.42, 0, 0.15, 0.84);
 }
 .container .contents table tr:hover td {
 	border-bottom: 2px solid #f06d02;
 }
+.container .contents table tr:hover .notice-title {
+	transform: translateX(2rem);
+}
 .container .contents table .notice-title {
-	font-size: 2rem;
+	font-size: 2.5rem;
 	width: 75%;
 }
 .container .contents table .notice-date {
+	text-align: right;
 	font-size: 1.6rem;
-	color: #57576e;
 	font-weight: bold;
+	color: #57576e;
 }
 
 .container .contents .paging {

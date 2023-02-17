@@ -16,6 +16,7 @@
 			<img th:src="@{images/notice/customers.jpg}" alt="background-images">
 		</section>
 		<section class="contents">
+			<input type="button" id="noticeRegist" value="등록" th:if="${session.userId == 'admin'}">
 			<table>
 				<tr th:each="notice : ${noticeList}" class="tableTr">
 					<td th:text="${notice.seq}" style="display: none;"></td>
@@ -30,7 +31,6 @@
 				<span th:if="${paging.cri.page == paging.totalCount / paging.cri.perPageNum + 1}"><a>다음페이지 　→</a></span>
 				<span th:if="${paging.cri.page != paging.totalCount / paging.cri.perPageNum + 1}"><a th:href="@{/notice(page=${paging.cri.page + 1})}">다음페이지 　→</a></span>
 			</div>
-			<input type="button" id="noticeRegist" value="등록" th:if="${session.userId == 'admin'}">
 		</section>
 	</div>
   	<th:block th:replace="~{layouts/footer :: footer}"></th:block>

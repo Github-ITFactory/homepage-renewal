@@ -19,10 +19,10 @@
 			<input type="hidden" th:value="${seq}" id="seq">
 			<div class="notice-title" th:text="${noticeEntity.title}"></div>
 			<div class="contents-wrap">
+				<input class="notice-modify" type="button" id="noticeModify" value="수정" th:if="${session.userId == 'admin'}">
 				<div class="notice-contents" th:utext="${noticeEntity.contents}"></div>
-				<input type="button" id="noticeModify" value="수정" th:if="${session.userId == 'admin'}">
 			</div>
-			<input type="button" id="noticeList" value="목록">
+			<input class="notice-list" type="button" id="noticeList" value="목록">
 		</section>
 	</div>
 	<th:block th:replace="~{layouts/footer :: footer}"></th:block>
