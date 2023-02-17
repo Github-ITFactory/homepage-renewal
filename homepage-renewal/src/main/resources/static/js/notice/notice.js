@@ -3,6 +3,8 @@
  */
 const tableTr = document.getElementsByClassName('tableTr');
 const noticeRegist = document.getElementById('noticeRegist');
+const windowLocationSearch = window.location.search.substr(-1);
+const pageNum = document.getElementsByClassName('pageNum');
 
 /**
  * 이벤트함수
@@ -27,6 +29,12 @@ if(noticeRegist != null) {
 	noticeRegist.addEventListener('click', () => {
 		window.location.href = "/notice/notice_regist";
 	});
+}
+
+for(let i = 0; i < pageNum.length; i++) {
+	if(pageNum[i].innerText === windowLocationSearch) {
+		pageNum[i].classList.add('on');
+	}
 }
 
 /**

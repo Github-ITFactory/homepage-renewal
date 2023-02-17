@@ -2,35 +2,39 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-  <meta charset="UTF-8">
-  <title>아이티팩토리</title>
-  <link rel="stylesheet" th:href="@{/css/notice/notice.css}">
-<style>
-	table, th, tr, td {border: 1px solid black; border-collapse: collapse;}
-</style>
+  	<meta charset="UTF-8">
+	<title>아이티팩토리</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+	<link rel="stylesheet" th:href="@{/css/notice/notice.css}">
+	<link rel="stylesheet" th:href="@{//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css}">
 </head>
 <body>
-	<!-- <th:block th:replace="~{layouts/header :: header}"></th:block> -->
-	
-	<h1>공지사항</h1>
-	<table>
-		<tr>
-			<th>제목</th>
-			<th>작성일자</th>
-		</tr>
-		<tr th:each="notice : ${noticeList}" class="tableTr">
-			<td th:text="${notice.seq}" style="display: none;"></td>
-			<td th:text="${notice.title}"></td>
-			<td th:text="${notice.createDt}"></td>
-		</tr>
-	</table>
-	<div>
-		<span th:if="${paging.cri.page != 1}"><a th:href="@{/notice(page=${paging.cri.page - 1})}">&lt; 이전페이지</a></span>
-		<span th:each="num : ${#numbers.sequence((paging.startPage), (paging.endPage))}" ><a th:text=${num} th:href="@{/notice(page=${num})}"></a></span>
-		<span th:if="${paging.cri.page != paging.totalCount / paging.cri.perPageNum + 1}"><a th:href="@{/notice(page=${paging.cri.page + 1})}">다음페이지 &gt;</a></span>
+	<th:block th:replace="~{layouts/header :: header}"></th:block>
+	<div class="container">
+		<section class="title-section">
+			<h3><b>공지사항</b><br> 아이티팩토리는<br>항상 고객의 입장에서 생각합니다 </h3>
+			<img th:src="@{images/notice/customers.jpg}" alt="background-images">
+		</section>
+		<section class="contents">
+			<table>
+				<tr th:each="notice : ${noticeList}" class="tableTr">
+					<td th:text="${notice.seq}" style="display: none;"></td>
+					<td class="notice-title" th:text="${notice.title}"></td>
+					<td class="notice-date" th:text="${notice.createDt}"></td>
+				</tr>
+			</table>
+			<div class="paging">
+				<span th:if="${paging.cri.page == 1}"><a>←　  이전페이지</a></span>
+				<span th:if="${paging.cri.page != 1}"><a th:href="@{/notice(page=${paging.cri.page - 1})}">←　  이전페이지</a></span>
+				<span th:each="num : ${#numbers.sequence((paging.startPage), (paging.endPage))}" ><a th:text=${num} th:href="@{/notice(page=${num})}" class="pageNum"></a></span>
+				<span th:if="${paging.cri.page == paging.totalCount / paging.cri.perPageNum + 1}"><a>다음페이지 　→</a></span>
+				<span th:if="${paging.cri.page != paging.totalCount / paging.cri.perPageNum + 1}"><a th:href="@{/notice(page=${paging.cri.page + 1})}">다음페이지 　→</a></span>
+			</div>
+			<input type="button" id="noticeRegist" value="등록" th:if="${session.userId == 'admin'}">
+		</section>
 	</div>
-	<input type="button" id="noticeRegist" value="등록" th:if="${session.userId == 'admin'}">
-  	<!-- <th:block th:replace="~{layouts/footer :: footer}"></th:block> -->
-  	<script defer th:src="@{/js/notice/notice.js}"></script>
+  	<th:block th:replace="~{layouts/footer :: footer}"></th:block>
+	<script defer th:src="@{/js/layouts/header.js}"></script>
+<script defer th:src="@{/js/notice/notice.js}"></script>
 </body>
 </html>

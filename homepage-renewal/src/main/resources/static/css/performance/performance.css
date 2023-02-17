@@ -70,12 +70,12 @@
 }
 
 .contents {
-  padding: 2rem 10%;
+  padding: 20rem 10%;
 }
 .contents .contents-list{
   display: flex;
   justify-content: center;
-  padding-bottom: 2rem;
+  padding-bottom: 5rem;
 }
 .contents .contents-list a {
   padding: 0rem 2rem;

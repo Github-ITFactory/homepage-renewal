@@ -8,9 +8,11 @@ const seq = document.getElementById('seq').value;
 /**
  * 이벤트함수
  */
-noticeModify.addEventListener('click', () => {
-	window.location.href = "/notice/notice_modify?seq=" + seq;
-});
+if(noticeModify != null) {
+	noticeModify.addEventListener('click', () => {
+		window.location.href = "/notice/notice_modify?seq=" + seq;
+	});
+}
 
 noticeList.addEventListener('click', () => {
 	window.location.href = "/notice?page=1";

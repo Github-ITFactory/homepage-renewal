@@ -582,6 +582,9 @@ width: 100%;
   line-height: 32px;
   padding-bottom: 60px;
 }
+.landing-pages-section-06 .bd .item .text-conts .desc b {
+ font-size: 20px;
+}
 .landing-pages-section-06 .bd .item .img-conts img {
   width: 85%;
 }

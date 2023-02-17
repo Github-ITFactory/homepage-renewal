@@ -7,6 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>인사말</h1>
+    <th:block th:replace="~{layouts/header :: header}"></th:block>
+	<section id="slider" class="title-section">
+		<h3><b> 아이</b><br> 아이티팩토리의 <br>주요실적을 확인해보세요 </h3>
+		<img th:src="@{images/pages/performance/performance.jpg}" alt="background-images">
+		<span><i class="xi-long-arrow-down"></i></span>
+	</section>
 </body>
 </html>

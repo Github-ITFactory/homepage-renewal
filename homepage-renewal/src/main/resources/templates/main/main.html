@@ -12,13 +12,13 @@
 
 <body>
   <th:block th:replace="~{layouts/header :: header}"></th:block>
-  <section class="section-1 main-section section">
+  <section class="section-1 main-section">
     <div class="first-section top-banner">
       <video th:poster="@{/images/main/top-video.jpg}" muted autoplay loop>
         <source th:src="@{/images/video/bg-video.mp4}" type="video/mp4">
       </video>
       <div class="main-text">
-        <h3>ITFACTORY</h3><span></span>
+        <h3>ITFACTORY</h3>
         <div class="p-wrap">
           <p>차별적인 ICT 기술과 서비스를 통해</p>
         </div>
@@ -28,16 +28,16 @@
       </div>
     </div>
   </section>
-  <section class="section-2 section">
+  <section class="section-2">
     <div class="second-section">
       <div class="left-wrap">
         <img data-aos="fade-right" data-aos-duration="2000" data-aos-offset="100"
         th:src="@{/images/main/section-2-left.jpg}" />
-        <div class="p-wrap" data-aos="fade-left" data-aos-duration="2000" data-aos-offset="0">
+        <div class="p-wrap" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="0">
           <span></span>
           <p>기업혁신의</p>
         </div>
-        <div class="p-wrap" data-aos="fade-left" data-aos-duration="2000" data-aos-offset="0" data-aos-delay="500">
+        <div class="p-wrap" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="0" data-aos-delay="500">
           <p>든든한 ICT 파트너</p>
         </div>
       </div>
@@ -50,27 +50,33 @@
         </div>
         <ul>
           <li>
-            <img th:src="@{/images/main/main_1.jpg}"  data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="00"/>
-            <h4 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="00">풍부한 경험과 경력</h4>
-            <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="00" data-aos-delay="00">더존, 비즈온 등 유명 IT 업체 출신의<br>전문가와 경력자로 구성되어<br>다양한 업종의 기업체<br>ERP 시스템을 구축합니다.</p>
+            <img th:src="@{/images/main/main-section2-1.jpg}"  data-aos="fade-up" data-aos-duration="3000"  data-aos-delay="00"/>
+            <div class="txt" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+              <h4 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="00">풍부한 경험과 경력</h4>
+              <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="00" data-aos-delay="00">더존, 비즈온 등 유명 IT 업체 출신의<br>전문가와 경력자로 구성되어<br>다양한 업종의 기업체<br>ERP 시스템을 구축합니다.</p>
+              </div>
           </li>
           <li>
-            <img th:src="@{/images/main/main_2.jpg}" data-aos="fade-up" data-aos-duration="1000"/>
-            <h4 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="00" data-aos-delay="00" >SI형 기업 솔루션</h4>
-            <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="00" data-aos-delay="00">패키지 솔루션을 기본으로 <br> SI(System Integration)<br>전문시장 및 시대 트랜드에<br>부합하는 개발을 합니다.</p>
+            <img th:src="@{/images/main/main-section2-2.jpg}" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="1000"/>
+            <div class="txt" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+              <h4 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="00" data-aos-delay="00" >SI형 기업 솔루션</h4>
+              <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="00" data-aos-delay="00">패키지 솔루션을 기본으로 <br> SI(System Integration)<br>전문시장 및 시대 트랜드에<br>부합하는 개발을 합니다.</p>
+              </div>
           </li>
           <li>
-            <img th:src="@{/images/main/main_3.jpg}" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="00" data-aos-delay="00" />
-            <h4 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="00" data-aos-delay="00">전문 기술력</h4> 
-            <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="00" data-aos-delay="00">최신 IT 기술을 적용하여<br>최고의 성능과 안전성을 지원합니다.<br>축적된 기술력으로 업종별 맞춤형 <br>커스터마이징 및 개발을 지원합니다.</p>
+            <img th:src="@{/images/main/main-section2-3.jpg}" data-aos="fade-up" data-aos-duration="3000" data-aos-offset="00" data-aos-delay="1000"/>
+            <div class="txt" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+              <h4 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="00" data-aos-delay="00">전문 기술력</h4> 
+              <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="00" data-aos-delay="00">최신 IT 기술을 적용하여<br>최고의 성능과 안전성을 지원합니다.<br>축적된 기술력으로 업종별 맞춤형 <br>커스터마이징 및 개발을 지원합니다.</p>
+            </div>
           </li>
         </ul>
       </div>
     </div>
   </section>
-  <section class="section-3 section">
+  <section class="section-3">
     <div class="third-section">
-      <h3 data-aos="fade-right" data-aos-duration="1000" data-aos-offset="00" data-aos-delay="00">We Create Solutions</h3>
+      <h3 data-aos="fade-right" data-aos-duration="2000" data-aos-offset="00" data-aos-delay="00">We Create Solutions</h3>
       <p data-aos="fade-right" data-aos-duration="1000" data-aos-offset="00" data-aos-delay="100">아이티팩토리의 혁신적인 기술을 경험해보세요.</p>
       <div class="contents-wrap">
         <ul class="contents-item">
@@ -119,14 +125,14 @@
       </div>
     </div>
   </section>
-  <section class="section-4 section">
+  <section class="section-4">
     <div class="fourth-section bottom-banner">
       <h3 data-aos="fade-right" data-aos-duration="1000" data-aos-offset="00" data-aos-delay="00">아이티팩토리</h3>
       <h4 data-aos="fade-right" data-aos-duration="1000" data-aos-offset="00" data-aos-delay="100">스마트 HACCP 솔루션</h4>
       <p data-aos="fade-right" data-aos-duration="1000" data-aos-offset="00" data-aos-delay="200">한국식품안전관리원에서 제공하는 표준 모듈을 적용하여 <br>스마트 HACCP 심사기준에 적합한 서비스를 제공합니다.</p>
       <div class="text-wrap">
         <h5 data-aos="fade-up" data-aos-duration="1000" data-aos-offset="00" data-aos-delay="500">궁금하신 점은 언제든지 문의하세요.</h5>
-        <a href="" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="00" data-aos-delay="500">문의하기 <i class="xi-arrow-right"></i></a>
+        <a th:href="@{/request?page=1}" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="00" data-aos-delay="500">문의하기 <i class="xi-arrow-right"></i></a>
       </div>
     </div>
   </section>
