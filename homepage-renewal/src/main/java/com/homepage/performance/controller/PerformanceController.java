@@ -53,6 +53,7 @@ public class PerformanceController {
 			modelAndView.addObject("userId", userId);
 		}
 		modelAndView.addObject("part", part);
+		modelAndView.addObject("page", page);
 		modelAndView.addObject("paging", paging);
 		modelAndView.addObject("slide", slide);
         

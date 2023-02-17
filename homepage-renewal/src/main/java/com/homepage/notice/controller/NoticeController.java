@@ -49,6 +49,7 @@ public class NoticeController {
 		NoticeEntity[] noticeList = this.noticeService.noticeList(pageStart, perPageNum);
 		modelAndView.addObject("noticeList", noticeList);
 		modelAndView.addObject("paging", paging);
+		modelAndView.addObject("page", page);
 		
         return modelAndView;
     }

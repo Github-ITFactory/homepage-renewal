@@ -36,5 +36,8 @@
   	<th:block th:replace="~{layouts/footer :: footer}"></th:block>
 	<script defer th:src="@{/js/layouts/header.js}"></script>
 <script defer th:src="@{/js/notice/notice.js}"></script>
+<script th:inline="javascript" >
+	const page = [[${page}]];
+</script>
 </body>
 </html>

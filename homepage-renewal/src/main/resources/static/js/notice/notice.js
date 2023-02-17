@@ -3,7 +3,6 @@
  */
 const tableTr = document.getElementsByClassName('tableTr');
 const noticeRegist = document.getElementById('noticeRegist');
-const windowLocationSearch = window.location.search.substr(-1);
 const pageNum = document.getElementsByClassName('pageNum');
 
 /**
@@ -32,7 +31,7 @@ if(noticeRegist != null) {
 }
 
 for(let i = 0; i < pageNum.length; i++) {
-	if(pageNum[i].innerText === windowLocationSearch) {
+	if(pageNum[i].innerText == page) {
 		pageNum[i].classList.add('on');
 	}
 }

@@ -32,8 +32,10 @@
 				</div>
 			</div>
 			<div class="paging">
+				<span th:if="${paging.cri.page == 1}"><a>←　  이전페이지</a></span>
 				<span th:if="${paging.cri.page != 1}"><a th:href="@{/performance(part=${part},page=${paging.cri.page - 1})}">←　  이전페이지</a></span>
-				<span th:each="num : ${#numbers.sequence((paging.startPage), (paging.endPage))}" ><a th:text=${num} th:href="@{/performance(part=${part}, page=${num})}"></a></span>
+				<span th:each="num : ${#numbers.sequence((paging.startPage), (paging.endPage))}" ><a th:text=${num} th:href="@{/performance(part=${part}, page=${num})}" class="pageNum"></a></span>
+				<span th:if="${paging.cri.page == paging.totalCount / paging.cri.perPageNum + 1}"><a>다음페이지 　→</a></span>
 				<span th:if="${paging.cri.page != paging.totalCount / paging.cri.perPageNum + 1}"><a th:href="@{/performance(part=${part},page=${paging.cri.page + 1})}">다음페이지 　→</a></span>
 			</div>
 			<input type="button" id="performRegist" value="등록" th:if="${userId == 'admin'}">
@@ -44,6 +46,7 @@
 	<script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js}"></script>
 	<script th:inline="javascript" >
 		const part = [[${part}]];
+		const page = [[${page}]];
 		const slide = [[${slide}]];
 	</script>
 	<script th:src="@{/js/performance/performance.js}"></script>
