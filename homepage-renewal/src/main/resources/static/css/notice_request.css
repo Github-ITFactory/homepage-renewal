@@ -311,9 +311,22 @@ input:focus {outline:none;}
 
 /* request-deatail 문의글 내용(관리자 로그인) */
 .container .request-detail-wrap {
-	padding: 10rem 2rem 5rem;
+	padding: 10rem 4rem 5rem;
 }
 .container .request-detail-wrap table th {
-	width: 20%;
+	padding: 0 2rem;
+	width: 15%;
 	text-align: left;
+	font-size: 2rem;
+	color: #ddd;
+	border-bottom: 2px solid #ffffff6c;
+}
+.container .request-detail-wrap table td {
+	height: 10vh;
+	line-height: 10vh;
+	font-size: 2rem;
+}
+.container .request-detail-wrap table #downFile {
+	border-bottom: 0;
+	display: inline-block;
 }
