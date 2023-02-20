@@ -108,7 +108,7 @@ body {
 }
 .section-2 .second-section {
 	display: flex;
-	height: 400vh;
+	height: 450vh;
 }
 .section-2 .left-wrap {
 	position: sticky;
@@ -159,7 +159,7 @@ body {
 	position: relative;
 	margin-top: 10rem;
 	width: 50%;
-	height: 400vh;
+	height: 450vh;
 }
 .section-2 .right-wrap li {
 	position: relative;

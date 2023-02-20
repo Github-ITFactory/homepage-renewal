@@ -2,39 +2,42 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" th:href="@{/css/request/request.css}">
+<title>아이티팩토리</title>
 <link rel="stylesheet" th:href="@{/css/style.css}">
-<link rel="stylesheet" th:href="@{https://unpkg.com/aos@2.3.1/dist/aos.css}">
+<link rel="stylesheet" th:href="@{/css/request/request.css}">
 <link rel="stylesheet" th:href="@{//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css}">
-<style>
-	table, th, tr, td {border: 1px solid black; border-collapse: collapse;}
-</style>
 </head>
 <body>
 	<th:block th:replace="~{layouts/header :: header}"></th:block>
-	<h1>구축의뢰</h1>
-	<table>
-		<tr>
-			<th>문의</th>
-			<th>작성자</th>
-		</tr>
-		<tr th:each="request : ${requestList}" class="tableTr">
-			<td th:text="${request.seq}" style="display: none;"></td>
-			<td th:text="${request.createDt} + ' 문의'"></td>
-			<td th:text="${request.name}"></td>
-		</tr>
-	</table>
-	<div>
-		<span th:if="${paging.cri.page != 1}"><a th:href="@{/request(page=${paging.cri.page - 1})}">&lt; 이전페이지</a></span>
-		<span th:each="num : ${#numbers.sequence((paging.startPage), (paging.endPage))}" ><a th:text=${num} th:href="@{/request(page=${num})}"></a></span>
-		<span th:if="${paging.cri.page != paging.totalCount / paging.cri.perPageNum + 1}"><a th:href="@{/request(page=${paging.cri.page + 1})}">다음페이지 &gt;</a></span>
+	<div class="container">
+		<section class="title-section">
+			<h3><b>문의사항</b><br> 아이티팩토리는<br>항상 고객의 입장에서 생각합니다 </h3>
+			<img th:src="@{images/notice/customers.jpg}" alt="background-images">
+		</section>
+		<section class="contents">
+			<input type="button" id="requestRegistBtn" value="문의하기">
+			<table>
+				<tr th:each="request : ${requestList}" class="tableTr">
+					<td th:text="${request.seq}" style="display: none;"></td>
+					<td class="notice-title" th:text="${request.createDt} + ' 문의'"></td>
+					<td class="notice-date" th:text="${request.name}"></td>
+				</tr>
+			</table>
+			<div class="paging">
+				<span th:if="${paging.cri.page == 1}"><a>←　  이전페이지</a></span>
+				<span th:if="${paging.cri.page != 1}"><a th:href="@{/request(page=${paging.cri.page - 1})}">←　  이전페이지</a></span>
+				<span th:each="num : ${#numbers.sequence((paging.startPage), (paging.endPage))}" ><a th:text=${num} th:href="@{/request(page=${num})}" class="pageNum"></a></span>
+				<span th:if="${paging.cri.page == paging.totalCount / paging.cri.perPageNum + 1}"><a>다음페이지 　→</a></span>
+				<span th:if="${paging.cri.page != paging.totalCount / paging.cri.perPageNum + 1}"><a th:href="@{/request(page=${paging.cri.page + 1})}">다음페이지 　→</a></span>
+			</div>
+		</section>
 	</div>
-	<input type="button" id="requestRegistBtn" value="등록">
-<th:block th:replace="~{layouts/footer :: footer}"></th:block>
-<script defer th:src="@{/js/request/request.js}"></script>
-<script th:inline="javascript">
-	const session = [[${session.userId}]];
-</script>
+	<th:block th:replace="~{layouts/footer :: footer}"></th:block>
+	<script defer th:src="@{/js/layouts/header.js}"></script>
+	<script defer th:src="@{/js/request/request.js}"></script>
+	<script th:inline="javascript">
+		const session = [[${session.userId}]];
+		const page = [[${page}]];
+	</script>
 </body>
 </html>

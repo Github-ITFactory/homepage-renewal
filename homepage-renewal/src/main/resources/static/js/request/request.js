@@ -3,6 +3,8 @@
  */
 const tableTr = document.getElementsByClassName('tableTr');
 const requestRegistBtn = document.getElementById('requestRegistBtn');
+const pageNum = document.getElementsByClassName('pageNum');
+
 
 /**
  * 이벤트함수
@@ -30,6 +32,19 @@ for(let i = 0; i < tableTr.length; i++) {
 requestRegistBtn.addEventListener('click', (e) => {
 	window.location.href = "/request/request_regist";
 });
+
+// if(requestRegistBtn != null) {
+// 	requestRegistBtn.addEventListener('click', () => {
+// 		window.location.href = "/request/request_regist";
+// 	});
+// }
+
+for(let i = 0; i < pageNum.length; i++) {
+	if(pageNum[i].innerText == page) {
+		pageNum[i].classList.add('on');
+	}
+}
+
 
 /**
  * 사용자 함수

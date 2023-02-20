@@ -4,7 +4,6 @@
 /*  ################## read me ###################
 
 💛 가능한 클래스명을 사용하며 하위레벨의 네이밍시 - 를 사용합니다.
-💛 들여쓰기 간격은 2 입니다.
 💛 속성은 한 줄에 하나씩 적습니다.
 💛 여백 및 글꼴의 크기는 rem, 또는 em을 사용합니다.
 
@@ -16,14 +15,14 @@
 /*  전체 적용 스타일  */
 * { font-size: 62.5%;}
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 body {
-  width: 100%;
+    width: 100%;
 	/* overflow-x: hidden; */
 }
 a {
-  display: block;
+    display: block;
 	text-decoration: none;
 	color: #333;
 }
@@ -34,165 +33,165 @@ a {
 
 /** header **/
 .header {
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 70px;
-  line-height: 70px;
-  box-sizing: border-box;
-  background: transparent;
-  transition: .3s ease-in-out;
-  z-index: 999;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    box-sizing: border-box;
+    background: transparent;
+    transition: .3s ease-in-out;
+    z-index: 999;
 }
 .header.scrollDown { 
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 2px 5px rgba(139, 139, 139, 0.2);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(139, 139, 139, 0.2);
 }
 .header.scrollDown a { 
-  color: #333;
+    color: #333;
 }
 .header.scrollDown .logo img:nth-of-type(1) {
-  opacity: 1;
+    opacity: 1;
 }
 .header.scrollDown .logo img:nth-of-type(2) {
-  opacity: 0;
+    opacity: 0;
 }
 
 .header:hover {
-  background: rgba(255, 255, 255, 0.9);
-  transition:  background .3s ease-in-out;
+    background: rgba(255, 255, 255, 0.9);
+    transition:  background .3s ease-in-out;
 }
 .header:hover a {
-  color: #333;
+    color: #333;
 }
 .header .logo {
-  position: relative;
-  width: 250px;
-  top: 1.5rem;
-  margin-left: 10rem;
+    position: relative;
+    width: 250px;
+    top: 1.5rem;
+    margin-left: 10rem;
 }
 .header .logo img {
-  position: absolute;
-  transition: 0.3s ease-in-out;
+    position: absolute;
+    transition: 0.3s ease-in-out;
 }
 .header .logo img:nth-of-type(1) {
-  opacity: 0;
+    opacity: 0;
 }
 .header:hover .logo img:nth-of-type(1) {
-  opacity: 1;
+    opacity: 1;
 }
 .header:hover .logo img:nth-of-type(2) {
-  opacity: 0;
+    opacity: 0;
 }
 .nav {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
 }
 .nav li { 
-  display: inline-block; 
+    display: inline-block; 
 }
 .nav a { 
-  font-size: 1.8rem; 
+    font-size: 1.8rem; 
 }
 .main-depth {
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  padding-right: 20rem; 
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    padding-right: 20rem; 
 }
 .main-depth > li > a {
-  position: relative;
-  padding: 0 2rem;
-  font-weight: 500;
-  color: #fff;
+    position: relative;
+    padding: 0 2rem;
+    font-weight: 500;
+    color: #fff;
 }
 .main-depth > li > a::after {
-  position: absolute;
-  content: '';
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-  width: 0;
-  height: 3px;
-  background: #F57E25;
-  transition: .2s ease;
+    position: absolute;
+    content: '';
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: #F57E25;
+    transition: .2s ease;
 }
 .main-depth > li:hover > a::after {
-  width: 100%;
+    width: 100%;
 }
 .main-depth > li:hover .sub-depth {
-  display: block;
+    display: block;
 }
 
 .sub-depth {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
-  display: none;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    display: none;
 }
 .sub-depth li, .sub-depth li a {
-  height: 40px;
-  line-height: 40px;
+    height: 40px;
+    line-height: 40px;
 }
 .sub-depth li a {
-  transform: translateX(-20%);
-  padding: 0 2rem;
-  font-size: 1.6rem;
+    transform: translateX(-50%);
+    padding: 0 2rem;
+    font-size: 1.6rem;
 }
 .sub-depth li a:hover {
-  color:#F57E25;
+    color:#F57E25;
 }
 
 .bg-wrap {
-  position: absolute;
-  width: 100%;
-  top: 70px;
-  left: 0;
-  height: 40px;
-  background: rgba(255,255,255,0.9);
-  border-top: 1px solid rgba(207, 207, 207, 0.5);
-  box-shadow: 0 2px 2px rgba(139, 139, 139, 0.2);
-  z-index: -1;
-  transition: 0.3 ease-in-out;
-  display: none;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    left: 0;
+    height: 40px;
+    background: rgba(255,255,255,0.9);
+    border-top: 1px solid rgba(207, 207, 207, 0.5);
+    box-shadow: 0 2px 2px rgba(139, 139, 139, 0.2);
+    z-index: -1;
+    transition: 0.3 ease-in-out;
+    display: none;
 }
 
 
 /** footer **/
 .footer {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  padding: 5rem 25% 5rem 15%;
-  width: 100%;
-  height: 250px;
-  background: #dfdfdf;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 25% 5rem 15%;
+    width: 100%;
+    height: 250px;
+    background: #dfdfdf;
 }
 .footer h3 {
-  width: 200px;
-  font-size: 2rem;
-  color: #6f6f6f;
-  border-right: 1px solid #afafaf;
+    width: 200px;
+    font-size: 2rem;
+    color: #6f6f6f;
+    border-right: 1px solid #afafaf;
 }
 .footer .txt-group {
-  width: 35%;
+    width: 35%;
 }
 .footer .txt-group p {
-  line-height: 2.5rem;
-  font-size: 1.6rem;
-  color: #6f6f6f;
+    line-height: 2.5rem;
+    font-size: 1.6rem;
+    color: #6f6f6f;
 }
 .footer span {
-  position: absolute;
-  bottom: 5rem;
-  padding: .5rem 1rem;
-  font-size: 1.6rem;
-  color: #afafaf;
-  border-radius: 30px;
+    position: absolute;
+    bottom: 5rem;
+    padding: .5rem 1rem;
+    font-size: 1.6rem;
+    color: #afafaf;
+    border-radius: 30px;
 }
 
 

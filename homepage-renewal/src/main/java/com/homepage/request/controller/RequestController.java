@@ -61,6 +61,7 @@ public class RequestController {
 		RequestEntity[] requestList = this.requestService.requestList(pageStart, perPageNum);
 		modelAndView.addObject("requestList", requestList);
 		modelAndView.addObject("paging", paging);
+		modelAndView.addObject("page", page);
         
         return modelAndView;
     }
