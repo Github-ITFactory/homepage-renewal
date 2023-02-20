@@ -70,11 +70,11 @@ table, th, tr, td {
 }
 .container .contents input[type='button'] {
 	position: absolute;
-	top: 120px;
+	top: 110px;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 90%;
-	line-height: 2;
+	width: 95%;
+	line-height: 2.5;
 	font-weight: bold;
 	font-size: 1.8rem;
 	border-style: none;

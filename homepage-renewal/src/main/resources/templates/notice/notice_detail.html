@@ -5,7 +5,8 @@
 	<meta charset="UTF-8">
 	<title>아이티팩토리</title>
 	<link rel="stylesheet" th:href="@{/css/style.css}">
-  	<link rel="stylesheet" th:href="@{/css/notice/notice_detail.css}">
+	<link rel="stylesheet" th:href="@{/css/notice_request.css}">
+  	<!-- <link rel="stylesheet" th:href="@{/css/notice/notice_detail.css}"> -->
 	<link rel="stylesheet" th:href="@{//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css}">
 </head>
 <body>
@@ -17,7 +18,7 @@
 		</section>
 		<section class="contents">
 			<input type="hidden" th:value="${seq}" id="seq">
-			<div class="notice-title" th:text="${noticeEntity.title}"></div>
+			<div class="d-notice-title" th:text="${noticeEntity.title}"></div>
 			<div class="contents-wrap">
 				<input class="notice-modify" type="button" id="noticeModify" value="수정" th:if="${session.userId == 'admin'}">
 				<div class="notice-contents" th:utext="${noticeEntity.contents}"></div>

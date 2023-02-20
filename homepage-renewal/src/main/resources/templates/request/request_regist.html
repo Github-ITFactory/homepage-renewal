@@ -2,23 +2,36 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" th:href="@{/css/request/request_regist.css}">
+<title>아이티팩토리</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+<link rel="stylesheet" th:href="@{/css/notice_request.css}">
 </head>
 <body>
-	<h1>구축의뢰 등록</h1>
-	<input type="text" id="name" placeholder="이름">
-	<input type="email" id="email" placeholder="이메일">
-	<input type="text" id="phone" placeholder="연락처">
-	<input type="text" id="position" placeholder="직책">
-	<input type="text" id="detail" placeholder="내용">
-	<input type="password" id="password" placeholder="비밀번호">
-	<input type="file" id="file">
-	<input type="button" id="registBtn" value="등록">
-	<div id="loading">
-		<img th:src="@{/images/loading.gif}" />
-		<span>등록중입니다..잠시만기다려주세요.</span>
+	<th:block th:replace="~{layouts/header :: header}"></th:block>
+	<div class="container">
+		<section class="title-section">
+			<h3><b>문의사항</b><br> 아이티팩토리는<br>항상 고객의 입장에서 생각합니다 </h3>
+			<img th:src="@{/images/notice/customers.jpg}" alt="background-images">
+		</section>
+		<section class="contents regist-wrap">
+			<div class="regist">
+				<input type="text" id="name" placeholder="이름">
+				<input type="email" id="email" placeholder="이메일">
+				<input type="text" id="phone" placeholder="연락처">
+				<input type="text" id="position" placeholder="직책">
+				<input type="text" id="detail" placeholder="내용">
+				<input type="password" id="password" placeholder="비밀번호">
+				<input type="file" id="file">
+				<input type="button" id="registBtn" value="등록">
+				<div id="loading">
+					<img th:src="@{/images/loading.gif}" />
+					<span>등록중입니다..잠시만기다려주세요.</span>
+				</div>
+			</div>
+		</section>
 	</div>
+	<th:block th:replace="~{layouts/footer :: footer}"></th:block>
+	<script defer th:src="@{/js/layouts/header.js}"></script>
 <script defer th:src="@{/js/request/request_regist.js}"></script>
 </body>
 </html>

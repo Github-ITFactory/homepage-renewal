@@ -1,0 +1,319 @@
+
+table, th, tr, td { 
+	font-size: 1.6rem; 
+	color: #fff;
+	cursor: pointer;
+}
+input:focus {outline:none;}
+
+.container {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	background: #091333;
+}
+
+.container section {
+	position: relative;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.container .title-section h3 {
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	transform: translateY(-50%);
+	letter-spacing: -.2rem;
+	font-size: 4.5rem;
+	color: rgba(255, 255, 255, 1);
+	z-index: 1;
+	animation: fadein 2s linear both;
+	font-family: 'Do Hyeon', sans-serif;
+}
+.container  .title-section b {
+	display: block;
+	position: relative;
+	margin-bottom: 10rem;
+	font-size: 5rem;
+}
+.container  .title-section b::after {
+	position: absolute;
+	content: '';
+	top: -3rem;
+	left: -1rem;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #f06d02;
+}
+.container  .title-section img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	/* animation: view 10s linear both; */
+}
+/* @keyframes view {
+	0% { transform: scale(1.5);}
+	100% { transform: scale(1);}
+} */
+.container .contents {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 10rem 1.5rem 5rem;
+	width: 50%;
+	height: 100%;
+}
+/* .container .contents input[type='button'] {
+	margin: 5rem 2rem 1rem auto;
+	width: 100px;
+	line-height: 2;
+	font-size: 1.8rem;
+	border-style: none;
+	border: 1px solid #e0e0e0;
+	border-radius: 3rem;
+	color: #e0e0e0;
+	background: none;
+	cursor: pointer;
+} */
+.container .contents input[type='button'] {
+	position: absolute;
+	bottom: 110px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 95%;
+	line-height: 2.5;
+	font-weight: bold;
+	font-size: 1.8rem;
+	border-style: none;
+	border-radius: 3rem;
+	color: #091333;
+	background: #b2b4ca;
+	cursor: pointer;
+	transition: box-shadow 0.3s ease-in-out;
+}
+.container .contents input[type='button']:hover {
+	box-shadow: inset 0px 0px 0px 50px #f06d02;
+}
+.container .contents table {
+	width: 100%;
+}
+.container .contents table td {
+	padding: 0 2rem;
+	line-height: 14vh;
+	border-bottom: 2px solid #ffffff18;
+	border-collapse: collapse; 
+	transition: .3s cubic-bezier(0.42, 0, 0.15, 0.84);
+}
+.container .contents table tr {
+	transition:.3s cubic-bezier(0.42, 0, 0.15, 0.84);
+}
+.container .contents table tr:hover td {
+	border-bottom: 2px solid #f06d02;
+}
+.container .contents table tr:hover .notice-title {
+	transform: translateX(2rem);
+}
+.container .contents table .notice-title {
+	font-size: 2.5rem;
+	width: 75%;
+}
+.container .contents table .notice-date {
+	text-align: right;
+	font-size: 1.6rem;
+	font-weight: bold;
+	color: #57576e;
+}
+
+.container .contents .paging {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+.container .contents .paging a {
+	padding: 0 1rem;
+	line-height: 2;
+	font-size: 1.6rem;
+	color: #e0e0e0;
+}
+.container .contents .paging a:hover {
+	color: #f06d02;
+}
+
+.on {
+	color: #f06d02 !important;
+}
+
+
+/* ################## notice style ################### */
+
+
+/* notice-detail 공지사항 내용 */
+.container .contents .d-notice-title {
+	padding: 2rem 4rem 4rem;
+	font-size: 4rem;
+	color: #fff;
+	border-bottom: 3px solid #f06d02;
+}
+.container .contents .contents-wrap {
+    display: flex;
+    flex-direction: column;
+	height: 100%;
+}
+.container .contents .contents-wrap .notice-contents {
+	padding: 4rem;
+	font-size: 1.6rem;
+	line-height: 1.5;
+	color: #fff;
+}
+
+.container .contents .contents-wrap .notice-contents p, 
+.notice-contents p span {
+	font-size: 1.6rem;
+	line-height: 1.5;
+	color: #fff;
+}
+.container .contents .contents-wrap .notice-modify {
+    position: unset;
+    transform: translateX(0);
+	display: block;
+    align-self: flex-end;
+	margin: 1rem 1rem 0;
+	width: 100px;
+	line-height: 2;
+	font-size: 1.6rem;
+	font-weight: bold;
+	border-style: none;
+    border: 2px solid #ddd;
+	border-radius: 3rem;
+	color: #ddd;
+	background: transparent;
+	cursor: pointer;
+}
+.container .contents .notice-list {
+	margin: 1rem auto 0;
+	width: 100px;
+	line-height: 2;
+	font-size: 1.8rem;
+	border-style: none;
+	border: 1px solid #e0e0e0;
+	border-radius: 3rem;
+	color: #e0e0e0;
+	background: none;
+	cursor: pointer;
+}
+
+
+/* ################## request style ################### */
+
+
+/* request-password  문의글 비밀번호 입력 페이지 */
+.container .password-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%;
+    align-self: center;
+}
+.container .password-wrap  h1 {
+    margin: 20rem 0  10rem;
+	width: 100%;
+	text-align: center;
+	font-size: 3rem;
+	color: #fefefe;
+}
+.container #password {
+    width: 200px;
+    padding: 0 2rem;
+	line-height: 2.5;
+	font-size: 2rem;
+	border-radius: 3rem;
+}
+.container #confirmBtn {
+    width: 100px;
+    position: unset;
+    transform: translateX(0%);
+	margin: 0 1rem;
+	line-height: 2.5;
+	font-size: 2rem;
+	color: #e0e0e0;
+	border-style: none;
+	border-radius: 3rem;
+	border: 2px solid #e0e0e0;
+	background: transparent;
+	cursor: pointer;
+}
+.container #confirmBtn:hover {
+	border: 2px solid #f06d02;
+	color: #f06d02;
+    box-shadow: none;
+}
+
+
+/* request-regist 문의 작성 페이지 */
+.container .regist-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 10rem 2rem 5rem;
+}
+.container .regist-wrap .regist {
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+    border-radius: 3rem;
+    background: #ffffff;
+}
+.container .regist #name, .container .regist #email,
+.container .regist #phone,.container .regist #position,
+.container .regist #detail,.container .regist #file,
+.container .regist #password {
+    padding: .5rem 2rem;
+    width: 100%;
+    line-height: 2.5;
+    font-size: 2rem;
+    border-style: none;
+    border-radius: 0;
+    border-bottom: 1px solid #e0e0e0;
+    background: transparent;
+}
+.container .regist #file {
+    font-size: 1.4rem;
+    border-bottom: none;
+}
+.container .regist #loading {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: none;
+    opacity: 0.6;
+    background: #e4e4e4;
+    z-index: 99;
+    text-align: center;
+}
+.container .regist #loading > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+}
+.container .regist #loading > span {
+    position: absolute;
+    top: 57%;
+    left: 43%;
+    z-index: 101;
+}
+
+/* request-deatail 문의글 내용(관리자 로그인) */
+.container .request-detail-wrap {
+	padding: 10rem 2rem 5rem;
+}
+.container .request-detail-wrap table th {
+	width: 20%;
+	text-align: left;
+}

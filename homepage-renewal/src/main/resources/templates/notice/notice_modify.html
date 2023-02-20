@@ -2,22 +2,20 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-  <meta charset="UTF-8">
-  <title>아이티팩토리</title>
-  <link rel="stylesheet" th:href="@{/css/notice/notice_modify.css}">
-<style>
-	table, th, tr, td {border: 1px solid black; border-collapse: collapse;}
-</style>
+  	<meta charset="UTF-8">
+	<title>아이티팩토리</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+	<link rel="stylesheet" th:href="@{/css/notice_request.css}">
+
 </head>
 <body>
-	<!-- <th:block th:replace="~{layouts/header :: header}"></th:block> -->
-	
+	<th:block th:replace="~{layouts/header :: header}"></th:block>
 	<h1>공지사항</h1>
 	<input type="hidden" th:value="${seq}" id="seq">
 	<input type="text" th:value="${noticeEntity.title}" id="title">
 	<textarea th:text="${noticeEntity.contents}" id="contents" name="contents"></textarea>
 	<input type="button" id="noticeModify" value="수정" th:if="${session.userId == 'admin'}">
-  	<!-- <th:block th:replace="~{layouts/footer :: footer}"></th:block> -->
+  	<th:block th:replace="~{layouts/footer :: footer}"></th:block>
 <script defer th:src="@{/js/notice/notice_modify.js}"></script>
 <script src="//cdn.ckeditor.com/4.20.1/full/ckeditor.js"></script>
 <script>
