@@ -42,6 +42,8 @@ registBtn.addEventListener('click', () => {
 	formData.append('detail', detail);
 	formData.append('password', password);
 	
+	document.getElementById("loading").style.display ='block';
+	
 	xhr('./regist', formData, 'POST', 'regist');
 });
 

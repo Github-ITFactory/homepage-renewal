@@ -3,9 +3,12 @@ package com.homepage.request.service;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -25,6 +28,9 @@ public class RequestService {
 	public RequestService(RequestMapper requestMapper) {
         this.requestMapper = requestMapper;
     }
+	
+	@Autowired
+	private JavaMailSender javaMailSender;
 	
 	public Enum<?> regist(RequestEntity requestEntity) {
 		return this.requestMapper.regist(requestEntity) > 0 ? CommonResult.SUCCESS : CommonResult.FAILURE;
@@ -84,5 +90,22 @@ public class RequestService {
 		requestEntity.setFilePath(filePath);
 		
 		return this.requestMapper.updateFile(requestEntity) > 0 ? CommonResult.SUCCESS : CommonResult.FAILURE;
+	}
+	
+	public void sendMail(RequestEntity requestEntity) {
+		ArrayList<String> toUserList = new ArrayList<>();
+		
+		toUserList.add("itfactory@it-factory.co.kr");
+		
+		int toUserSize = toUserList.size();
+		
+		SimpleMailMessage simpleMessage = new SimpleMailMessage();
+		
+		simpleMessage.setTo((String[]) toUserList.toArray(new String[toUserSize]));
+		
+		simpleMessage.setSubject("회사 홈페이지 문의사항");
+		simpleMessage.setText(requestEntity.getDetail());
+		
+		javaMailSender.send(simpleMessage);
 	}
 }
