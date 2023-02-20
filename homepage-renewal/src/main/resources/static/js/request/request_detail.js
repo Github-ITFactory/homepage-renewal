@@ -3,12 +3,17 @@
  */
 const downFile = document.getElementById('downFile');
 const seq = document.getElementById('seq').value;
+const requestList = document.getElementById('requestList');
 
 /**
  * 이벤트함수
  */
 downFile.addEventListener('click', () => {
 	window.location.href = "./fileDown?seq=" + seq;
+});
+
+requestList.addEventListener('click', () => {
+	window.location.href = "/request?page=1";
 });
 
 /**

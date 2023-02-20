@@ -3,6 +3,7 @@
  */
 const seq = document.getElementById('seq');
 const confirmBtn = document.getElementById('confirmBtn');
+const backBtn = document.getElementById('backBtn');
 
 /**
  * 이벤트함수
@@ -16,6 +17,10 @@ confirmBtn.addEventListener('click', () => {
 	}
 
 	xhr(`./passwordCheck?seq=${seqValue}&password=${password}`, null, 'GET', 'passwordCheck');
+});
+
+backBtn.addEventListener('click', () => {
+	window.history.back();
 });
 
 /**
