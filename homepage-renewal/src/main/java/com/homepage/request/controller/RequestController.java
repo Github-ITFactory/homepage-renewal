@@ -5,12 +5,14 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.URLEncoder;
+import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -112,6 +114,9 @@ public class RequestController {
 	public String regist(RequestEntity requestEntity) {
 		JSONObject responseObject = new JSONObject();
 		Enum<?> result = this.requestService.regist(requestEntity);
+		if("success".equals(result.name().toLowerCase())) {
+			this.requestService.sendMail(requestEntity);
+		}
 		responseObject.put("result", result.name().toLowerCase());
 		responseObject.put("seq", requestEntity.getSeq());
         
