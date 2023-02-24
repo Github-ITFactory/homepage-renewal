@@ -21,7 +21,7 @@
                         <li><a th:href="@{/come}">오시는 길</a></li>
                     </ul>
                 </li>
-                <li><a th:href="@{/khaccp}">HACCP 사후관리 시스템</a>
+                <li><a th:href="@{/khaccp}">K-HACCP</a>
                 </li>
                 <li><a th:href="@{/smarthaccp}">스마트 HACCP</a>
                 </li>
@@ -29,6 +29,37 @@
                 </li>
                 <li><a th:href="@{/notice?page=1}">고객센터</a>
                     <ul class="sub-depth">
+                        <li><a th:href="@{/notice?page=1}">공지사항</a></li>
+                        <li><a th:href="@{/request?page=1}">문의사항</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <nav class="mobile-nav">
+            <div class="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="m-main-depth">
+                <li><div class="close-btn">
+                    <span></span>
+                    <span></span>
+                </div></li>
+                <li class="m-depth"><a>회사소개</a>
+                    <ul class="m-sub-depth">
+                        <li><a th:href="@{/about}">인사말</a></li>
+                        <li><a th:href="@{/come}">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li><a th:href="@{/khaccp}">K-HACCP</a>
+                </li>
+                <li><a th:href="@{/smarthaccp}">스마트 HACCP</a>
+                </li>
+                <li><a th:href="@{/performance?part=0&page=1&slide=no}">주요실적</a>
+                </li>
+                <li class="m-depth"><a>고객센터</a>
+                    <ul class="m-sub-depth">
                         <li><a th:href="@{/notice?page=1}">공지사항</a></li>
                         <li><a th:href="@{/request?page=1}">문의사항</a></li>
                     </ul>

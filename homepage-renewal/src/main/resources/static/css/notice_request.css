@@ -26,7 +26,7 @@ input:focus {outline:none;}
 	left: 10%;
 	transform: translateY(-50%);
 	letter-spacing: -.2rem;
-	font-size: 4.5rem;
+	font-size: 2.8vw;
 	color: rgba(255, 255, 255, 1);
 	z-index: 1;
 	animation: fadein 2s linear both;
@@ -36,7 +36,7 @@ input:focus {outline:none;}
 	display: block;
 	position: relative;
 	margin-bottom: 10rem;
-	font-size: 5rem;
+	font-size: 3vw;
 }
 .container  .title-section b::after {
 	position: absolute;
@@ -80,7 +80,7 @@ input:focus {outline:none;}
 } */
 .container .contents input[type='button'] {
 	position: absolute;
-	bottom: 110px;
+	bottom: 1rem;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 95%;
@@ -102,7 +102,7 @@ input:focus {outline:none;}
 }
 .container .contents table td {
 	padding: 0 2rem;
-	line-height: 14vh;
+	height: 12vh;
 	border-bottom: 2px solid #ffffff18;
 	border-collapse: collapse; 
 	transition: .3s cubic-bezier(0.42, 0, 0.15, 0.84);
@@ -118,7 +118,7 @@ input:focus {outline:none;}
 }
 .container .contents table .notice-title {
 	font-size: 2.5rem;
-	width: 75%;
+	width: 65%;
 }
 .container .contents table .notice-date {
 	text-align: right;
@@ -131,6 +131,7 @@ input:focus {outline:none;}
 	display: flex;
 	justify-content: center;
 	width: 100%;
+	margin-bottom: 4rem;
 }
 .container .contents .paging a {
 	padding: 0 1rem;
@@ -214,7 +215,7 @@ input:focus {outline:none;}
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 50%;
+    width: 60%;
     align-self: center;
 }
 .container .password-wrap  h1 {
@@ -263,7 +264,7 @@ input:focus {outline:none;}
     padding: 2rem;
     align-items: center;
     flex-direction: column;
-    height: 50vh;
+    height: 90%;
     border-radius: 3rem;
     background: #ffffff;
 }
@@ -330,3 +331,189 @@ input:focus {outline:none;}
 	border-bottom: 0;
 	display: inline-block;
 }
+
+
+
+
+/* ################## view ports ################### */
+
+/* 1366px 이하 */
+@media (max-width: 1366px) {
+	.container .contents table .notice-title {
+		width: 65%;
+		line-height: 2;
+		font-size: 2rem;
+	}
+	.container .contents table .notice-date {
+		line-height: 2;
+	}
+	.container .contents .paging {
+		flex-wrap: wrap;
+	}
+	/* 공지 디테일 */
+	.container .contents .d-notice-title {
+		font-size: 3vw;
+	}
+	/* 문의사항 비밀글 */
+	.container #password {
+		width: 12vw;
+		line-height: 2;
+	}
+	/* 문의사항 디테일 */
+	.container .request-detail-wrap table th {
+		width: 10vw;
+	}
+
+}
+/* 1024px 이하 */
+@media (max-width: 1024px) {
+
+	/* 문의사항 비밀글 */
+	.container .password-wrap {
+		width: 80%;
+	}
+	.container .password-wrap h1 {
+		margin: 10rem 0;
+		font-size: 2.6rem;
+	}
+	.container #password, .container #confirmBtn {
+		margin-bottom: 5rem;
+		line-height: 2.5;
+		font-size: 1.8rem;
+	}
+	.container #password {
+		width: 10vw;
+		line-height: 2;
+	}
+}
+/* 768px 이하 */
+@media (max-width: 768px) {
+	.container {
+		flex-direction: column;
+		height: 100%;
+	}
+	.container section {
+		width: 100%;
+	}
+	.container .contents {
+		padding: 5rem 1.5rem;
+		width: 100%;
+	}
+	.container .contents input[type="button"] {
+		bottom: 1rem;
+	}
+	.container .contents table td {
+		height: 7vh;
+	}
+	.container .contents .paging {
+		margin: 2rem 0;
+	}
+	/* 문의사항 비밀글 */
+	.container .password-wrap {
+		width: 80%;
+	}
+	/* 문의사항 글쓰기 */
+	.container .regist-wrap .regist {
+		margin-bottom: 4rem;
+	}
+}
+/* 460px 이하 */
+@media (max-width: 460px) {
+	.container .contents {
+		padding: 2rem 1.5rem 5rem;
+	}
+	.container .contents table {
+		margin-bottom: 4rem;
+	}
+	.container .title-section {
+		height: 300px;
+	}
+	.container .title-section h3 {
+		transform: translateY(0);
+		font-size: 2rem;
+	}
+	.container .title-section b {
+		font-size: 2rem;
+		margin-bottom: 2.4rem;
+	}
+	.container .title-section b::after {
+		position: absolute;
+		content: '';
+		top: -3rem;
+		left: -1rem;
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		background: #f06d02;
+	}
+	.container .contents table td:nth-of-type(even) {
+		padding-right: 0;
+	}
+	.container .contents table .notice-title {
+		font-size: 1.6rem;
+	}
+	.container .contents table .notice-date {
+		line-height: 1.5;
+		font-weight: normal;
+		font-size: 1.2rem;
+	}
+	.container .contents .paging {
+		flex-wrap: wrap;
+	}
+	.container .contents input[type="button"] {
+		bottom: 1rem;
+	}
+
+	/* 공지 디테일 */
+	.container .contents .d-notice-title {
+		padding: 2rem;
+		font-size: 2.2rem;
+	}
+	.container .contents .contents-wrap {
+		margin-bottom: 4rem;
+	}
+	.container .contents .contents-wrap .notice-contents {
+		padding: 2rem;
+	}
+
+	/* 문의사항 글작성 */
+	.container .regist-wrap .regist {
+		margin-bottom: 2rem;
+	}
+	.container .regist #name, .container .regist #email, 
+	.container .regist #phone, .container .regist #position, 
+	.container .regist #detail, .container .regist #file, 
+	.container .regist #password {
+		font-size: 1.6rem;
+	}
+	
+	/* 문의사항 비밀글 */
+	.container .password-wrap {
+		width: 90%;
+	}
+	.container .password-wrap h1 {
+		margin: 10rem 0 5rem;
+		font-size: 2.2rem;
+	}
+	.container #password, .container #confirmBtn {
+		margin-bottom: 5rem;
+		line-height: 2;
+		font-size: 1.6rem;
+	}
+	.container #password {
+		width: 20vw;
+	}
+	/* 문의사항 디테일 */
+	.container .request-detail-wrap table td {
+		height: 7vh;
+		line-height: 7vh;
+		font-size: 1.6rem;
+	}
+	.container .request-detail-wrap table th {
+		width: 70px;
+		font-size: 1.6rem;
+	}
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@ view ports @@@@@@@@@@@@@@@@@@@ */

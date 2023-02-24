@@ -31,7 +31,7 @@
   left: 10%;
   transform: translateY(-50%);
   letter-spacing: -.2rem;
-  font-size: 7rem;
+  font-size: 4.2vw;
   color: rgba(255, 255, 255, 1);
   z-index: 1;
   animation: fadein 2s linear both;
@@ -40,7 +40,7 @@
 .title-section b {
   display: block;
   position: relative;
-  font-size: 4rem;
+  font-size: 2.8vw;
 }
 .title-section b::after {
   position: absolute;
@@ -71,11 +71,59 @@
 .contents {
   padding: 20rem 10%;
   padding-left: 50%;
-  height: 100vh;
+  height: 100%;
 }
-
 .contents p {
     font-size: 2rem;
     line-height: 1.5;
     color: #e0e0e0;
 }
+.contents .root_daum_roughmap_landing {
+  width: 100%;
+}
+.contents .root_daum_roughmap .wrap_map {
+  height: 400px;
+}
+
+
+
+
+/* ################## view ports ################### */
+
+/* 1024px 이하 */
+@media (max-width: 1024px) {
+  .title-section b {
+    font-size: 4vw;
+  }
+  .contents p {
+    font-size: 1.6rem;
+  }
+}
+/* 768px 이하 */
+@media (max-width: 768px) {
+  .contents {
+    padding: 10rem 10%;
+    padding-left: 10%;
+  }
+}
+/* 460px 이하 */
+@media (max-width: 460px) {
+  .title-section h3 {
+    font-size: 3rem;
+  }
+  .title-section b {
+    font-size: 3rem;
+  }
+  .title-section b::after {
+    position: absolute;
+    content: '';
+    top: -3rem;
+    left: -1rem;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #f06d02;
+  }
+}
+
+/* @@@@@@@@@@@@@@@@@@@ view ports @@@@@@@@@@@@@@@@@@@ */

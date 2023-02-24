@@ -32,7 +32,7 @@
   left: 10%;
   transform: translateY(-50%);
   letter-spacing: -.2rem;
-  font-size: 7rem;
+  font-size: 4.2vw;
   color: rgba(255, 255, 255, 1);
   z-index: 1;
   animation: fadein 2s linear both;
@@ -41,7 +41,7 @@
 .title-section b {
   display: block;
   position: relative;
-  font-size: 4rem;
+  font-size: 2.8vw;
 }
 .title-section b::after {
   position: absolute;
@@ -142,3 +142,65 @@
 .on {
 	color: #f06d02 !important;
 }
+
+
+/* ################## view ports ################### */
+
+/* 1024px 이하 */
+@media (max-width: 1024px) {
+  .title-section b {
+    font-size: 4vw;
+  }
+  .contents {
+    padding: 15rem 5%;
+  }
+  .contents p {
+    font-size: 1.6rem;
+  }
+}
+/* 460px 이하 */
+@media (max-width: 460px) {
+  .title-section h3 {
+    font-size: 3rem;
+  }
+  .title-section b {
+    font-size: 3rem;
+  }
+  .title-section b::after {
+    position: absolute;
+    content: '';
+    top: -3rem;
+    left: -1rem;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #f06d02;
+  }
+  .contents {
+    padding: 5rem 5%;
+  }
+  .contents .contents-list {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  .contents .contents-items-wrap .content-item {
+    width: 100%;
+    height: 160px;
+    
+  }
+  .contents .contents-items-wrap .item-title {
+    font-size: 2rem;
+  }
+  .contents .contents-items-wrap .content-item span {
+    font-size: 1.1rem;
+  }
+  .contents .contents-items-wrap .content-item div:not(.item-title) {
+    font-size: 1.2rem;
+  }
+  .contents .paging {
+    flex-wrap: wrap;
+  }
+}
+
+/* @@@@@@@@@@@@@@@@@@@ view ports @@@@@@@@@@@@@@@@@@@ */

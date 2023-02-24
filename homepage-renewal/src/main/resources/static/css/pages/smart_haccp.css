@@ -34,7 +34,7 @@
   left: 10%;
   transform: translateY(-50%);
   letter-spacing: -.2rem;
-  font-size: 7rem;
+  font-size: 4.2vw;
   color: rgba(255, 255, 255, 1);
   z-index: 1;
   animation: fadein 2s linear both;
@@ -43,7 +43,7 @@
 .title-section b {
   display: block;
   position: relative;
-  font-size: 4rem;
+  font-size: 2.8vw;
 }
 .title-section b::after {
   position: absolute;
@@ -242,6 +242,14 @@
   .leaflet_box:hover{border: 1px solid #333;transition: .5s;}
 }
 
+/* ################## view ports ################### */
+
+/* 1024px 이하 */
+@media (max-width: 1024px) {
+  .title-section b {
+    font-size: 4vw;
+  }
+}
 @media (max-width: 1023px) {
   .main > div{width: 100%;text-align: center;}
   .main .main_right .main_tit{height:auto;display: flex;justify-content: center;margin: 2rem 0 1rem;align-items: center;}
@@ -354,3 +362,24 @@
   .leaflet_box{width: 100%;}
   .leaflet_box:not(last-child){margin-bottom: 20px;}
 }
+
+/* 460px 이하 */
+@media (max-width: 460px) {
+  .title-section h3 {
+    font-size: 3rem;
+  }
+  .title-section b {
+    font-size: 3rem;
+  }
+  .title-section b::after {
+    position: absolute;
+    content: '';
+    top: -3rem;
+    left: -1rem;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #f06d02;
+  }
+}
+/* @@@@@@@@@@@@@@@@@@@ view ports @@@@@@@@@@@@@@@@@@@ */

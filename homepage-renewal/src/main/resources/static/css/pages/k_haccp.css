@@ -31,7 +31,7 @@
   left: 10%;
   transform: translateY(-50%);
   letter-spacing: -.2rem;
-  font-size: 7rem;
+  font-size: 4.2vw;
   color: rgba(255, 255, 255, 1);
   z-index: 1;
   animation: fadein 2s linear both;
@@ -40,7 +40,7 @@
 .title-section b {
   display: block;
   position: relative;
-  font-size: 4rem;
+  font-size: 2.8vw;
 }
 .title-section b::after {
   position: absolute;
@@ -826,8 +826,16 @@ width: 100%;
 }
 
 
-
-
+/* ################## view ports ################### */
+/* 1024px 이하 */
+@media (max-width: 1024px) {
+  .title-section b {
+    font-size: 4vw;
+  }
+  .contents p {
+    font-size: 1.6rem;
+  }
+}
 
 
 @media (max-width: 1200px) {
@@ -954,6 +962,9 @@ width: 100%;
     font-size: 18px;
   }
   .landing-pages-section-05 .bd .item .desc ,.landing-pages-section-06 .bd .item .text-conts .desc{
+    font-size: 12px;
+  }
+  .landing-pages-section-06 .bd .item .text-conts .desc b {
     font-size: 12px;
   }
   .landing-pages-section-05 .bd .item {
@@ -1096,8 +1107,45 @@ width: 100%;
 
 }
 
+/* 460px 이하 */
+@media (max-width: 460px) {
+  .title-section h3 {
+    font-size: 2.5rem;
+  }
+  .title-section b {
+    font-size: 3rem;
+  }
+  .title-section b::after {
+    position: absolute;
+    content: '';
+    top: -3rem;
+    left: -1rem;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #f06d02;
+  }
+  .title-section .direct-btn {
+    margin-right: .5rem;
+  }
+  .title-section .direct-btn a {
+    padding: 0rem 2rem;
+    line-height: 2.5;
+    font-size: 1.6rem;
+  }
+}
 
 @media (max-width: 400px) {
+  .landing-pages-section-01 .direct-btn a {
+    padding: 1rem 1.5rem;
+    border: 3px solid #0051A4;
+    border-radius: 100px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    background: #F18A24;
+    transition: 0.3s cubic-bezier(0.83, 0.18, 1, 1);
+  }
   .landing-pages-section-09 .sectionWrap {
     background: url('../../images/pages/k_haccp/section09/Frame\ 4.jpg') 0 0 no-repeat;
     height:200vh;
@@ -1112,18 +1160,5 @@ width: 100%;
     background: url('../../images/pages/k_haccp/section09/Frame\ 6.jpg') 0 0 no-repeat;
     height: 130px;
     background-size: contain;
-  }
-}
-
-@media (max-width: 400px) {
-  .landing-pages-section-01 .direct-btn a {
-    padding: 1rem 1.5rem;
-    border: 3px solid #0051A4;
-    border-radius: 100px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #fff;
-    background: #F18A24;
-    transition: 0.3s cubic-bezier(0.83, 0.18, 1, 1);
   }
 }
