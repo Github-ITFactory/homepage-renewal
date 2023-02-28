@@ -160,11 +160,11 @@ width: 100%;
   margin-top: 60px;
 }
 .landing-pages-section-01 .landing-pages-swiper-01 .img-conts.animate-img img {
+  top: 20%;
   animation: gens 1s ease-in infinite;
 }
 .landing-pages-section-01 .landing-pages-swiper-01 .img-conts img {
   position: absolute;
-  padding-top: 50px;
   width: 28%;
 
 }
@@ -839,9 +839,9 @@ width: 100%;
 
 
 @media (max-width: 1200px) {
-  .landing-pages-section-01 .landing-pages-swiper-01 .img-conts img {
+  /* .landing-pages-section-01 .landing-pages-swiper-01 .img-conts img {
     width: 100%;
-  }
+  } */
 
 
   .sectionWrap{
@@ -1132,6 +1132,9 @@ width: 100%;
     padding: 0rem 2rem;
     line-height: 2.5;
     font-size: 1.6rem;
+  }
+  .landing-pages-section-01 .landing-pages-swiper-01 .img-conts.animate-img img {
+    top: 50%;
   }
 }
 

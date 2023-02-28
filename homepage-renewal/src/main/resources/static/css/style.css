@@ -134,6 +134,7 @@ a {
     height: 40px;
     line-height: 40px;
     display: none;
+    transition: .3s ease-in-out;
 }
 .nav .sub-depth li, .sub-depth li a {
     height: 40px;
@@ -164,7 +165,7 @@ a {
     border-top: 1px solid rgba(207, 207, 207, 0.5);
     box-shadow: 0 2px 2px rgba(139, 139, 139, 0.2);
     z-index: -1;
-    transition: 0.3 ease-in-out;
+    transition: 0.3s ease-in-out;
     display: none;
 }
 

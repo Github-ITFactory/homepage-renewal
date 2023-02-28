@@ -266,7 +266,7 @@ input:focus {outline:none;}
     flex-direction: column;
     height: 90%;
     border-radius: 3rem;
-    background: #ffffff;
+    background: linear-gradient(45deg, #fff,#ffffffad);
 }
 .container .regist #name, .container .regist #email,
 .container .regist #phone,.container .regist #position,
@@ -278,7 +278,7 @@ input:focus {outline:none;}
     font-size: 2rem;
     border-style: none;
     border-radius: 0;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #0913330f;
     background: transparent;
 }
 .container .regist #file {
