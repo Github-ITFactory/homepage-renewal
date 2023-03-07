@@ -17,11 +17,13 @@
 			<img th:src="@{/images/notice/customers.jpg}" alt="background-images"/>
 		</section>
 		<section class="contents">
-			<input type="hidden" th:value="${seq}" id="seq">
-			<div class="d-notice-title" th:text="${noticeEntity.title}"></div>
-			<div class="contents-wrap">
-				<input class="notice-modify" type="button" id="noticeModify" value="수정" th:if="${session.userId == 'admin'}">
-				<div class="notice-contents" th:utext="${noticeEntity.contents}"></div>
+			<div class="contents-box">
+				<input type="hidden" th:value="${seq}" id="seq">
+				<div class="d-notice-title" th:text="${noticeEntity.title}"></div>
+				<div class="contents-wrap">
+					<input class="notice-modify" type="button" id="noticeModify" value="수정" th:if="${session.userId == 'admin'}">
+					<div class="notice-contents" th:utext="${noticeEntity.contents}"></div>
+				</div>
 			</div>
 			<input class="notice-list" type="button" id="noticeList" value="목록">
 		</section>

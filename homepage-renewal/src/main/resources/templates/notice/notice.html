@@ -17,19 +17,21 @@
 		</section>
 		<section class="contents">
 			<input type="button" id="noticeRegist" value="등록" th:if="${session.userId == 'admin'}">
-			<table>
-				<tr th:each="notice : ${noticeList}" class="tableTr">
-					<td th:text="${notice.seq}" style="display: none;"></td>
-					<td class="notice-title" th:text="${notice.title}"></td>
-					<td class="notice-date" th:text="${notice.createDt}"></td>
-				</tr>
-			</table>
-			<div class="paging">
-				<span th:if="${paging.cri.page == 1}"><a>←　  이전페이지</a></span>
-				<span th:if="${paging.cri.page != 1}"><a th:href="@{/notice(page=${paging.cri.page - 1})}">←　  이전페이지</a></span>
-				<span th:each="num : ${#numbers.sequence((paging.startPage), (paging.endPage))}" ><a th:text=${num} th:href="@{/notice(page=${num})}" class="pageNum"></a></span>
-				<span th:if="${paging.cri.page == paging.totalCount / paging.cri.perPageNum + 1}"><a>다음페이지 　→</a></span>
-				<span th:if="${paging.cri.page != paging.totalCount / paging.cri.perPageNum + 1}"><a th:href="@{/notice(page=${paging.cri.page + 1})}">다음페이지 　→</a></span>
+			<div class="contents-box">
+				<table>
+					<tr th:each="notice : ${noticeList}" class="tableTr">
+						<td th:text="${notice.seq}" style="display: none;"></td>
+						<td class="notice-title" th:text="${notice.title}"></td>
+						<td class="notice-date" th:text="${notice.createDt}"></td>
+					</tr>
+				</table>
+				<div class="paging">
+					<span th:if="${paging.cri.page == 1}"><a>←　  이전페이지</a></span>
+					<span th:if="${paging.cri.page != 1}"><a th:href="@{/notice(page=${paging.cri.page - 1})}">←　  이전페이지</a></span>
+					<span th:each="num : ${#numbers.sequence((paging.startPage), (paging.endPage))}" ><a th:text=${num} th:href="@{/notice(page=${num})}" class="pageNum"></a></span>
+					<span th:if="${paging.cri.page == paging.totalCount / paging.cri.perPageNum + 1}"><a>다음페이지 　→</a></span>
+					<span th:if="${paging.cri.page != paging.totalCount / paging.cri.perPageNum + 1}"><a th:href="@{/notice(page=${paging.cri.page + 1})}">다음페이지 　→</a></span>
+				</div>
 			</div>
 		</section>
 	</div>

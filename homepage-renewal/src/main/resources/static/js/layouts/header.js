@@ -3,8 +3,9 @@
  */
 // const getTest = document.getElementById('getTest');
 const header = document.querySelector('.header');
-const subDepth_A = document.querySelector('.main-depth li:nth-child(1)');
-const subDepth_B = document.querySelector('.main-depth li:nth-child(5)');
+// const subDepth_A = document.querySelector('.main-depth > li:nth-child(1)');
+const subDepth_B = document.querySelector('.main-depth > li:nth-child(2)');
+const subDepth_C = document.querySelector('.main-depth > li:nth-child(4)');
 const hamburger = document.querySelector('.hamburger-btn');
 const subBg = document.querySelector('.bg-wrap');
 
@@ -40,16 +41,22 @@ document.addEventListener("scroll", function(){
 });
 
 
-subDepth_A.addEventListener('mouseover', ()=>{
-    subBg.style.display = "block";
-});
+// subDepth_A.addEventListener('mouseover', ()=>{
+//     subBg.style.display = "block";
+// });
 subDepth_B.addEventListener('mouseover', ()=>{
     subBg.style.display = "block";
 });
-subDepth_A.addEventListener('mouseout', ()=>{
+subDepth_C.addEventListener('mouseover', ()=>{
+    subBg.style.display = "block";
+});
+// subDepth_A.addEventListener('mouseout', ()=>{
+//     subBg.style.display = "none";
+// });
+subDepth_B.addEventListener('mouseout', ()=>{
     subBg.style.display = "none";
 });
-subDepth_B.addEventListener('mouseout', ()=>{
+subDepth_C.addEventListener('mouseout', ()=>{
     subBg.style.display = "none";
 });
 

@@ -16,14 +16,16 @@
         <nav class="nav">
             <ul class="main-depth">
                 <li><a th:href="@{/about}">회사소개</a>
-                    <ul class="sub-depth">
+                    <!-- <ul class="sub-depth">
                         <li><a th:href="@{/about}">인사말</a></li>
                         <li><a th:href="@{/come}">오시는 길</a></li>
+                    </ul> -->
+                </li>
+                <li><a>플랫폼</a>
+                    <ul class="sub-depth">
+                        <li><a th:href="@{/khaccp}">K-HACCP</a></li>
+                        <li><a th:href="@{/smarthaccp}">스마트 K-HACCP</a></li>
                     </ul>
-                </li>
-                <li><a th:href="@{/khaccp}">K-HACCP</a>
-                </li>
-                <li><a th:href="@{/smarthaccp}">스마트 HACCP</a>
                 </li>
                 <li><a th:href="@{/performance?part=0&page=1&slide=no}">주요실적</a>
                 </li>
@@ -50,11 +52,15 @@
                     <ul class="m-sub-depth">
                         <li><a th:href="@{/about}">인사말</a></li>
                         <li><a th:href="@{/come}">오시는 길</a></li>
+                        <li><a href="">인증서</a></li>
+                        <li><a href="">연혁</a></li>
                     </ul>
                 </li>
-                <li><a th:href="@{/khaccp}">K-HACCP</a>
-                </li>
-                <li><a th:href="@{/smarthaccp}">스마트 HACCP</a>
+                <li class="m-depth"><a>플랫폼</a>
+                    <ul class="m-sub-depth">
+                        <li><a th:href="@{/khaccp}">K-HACCP</a></li>
+                        <li><a th:href="@{/smarthaccp}">스마트 HACCP</a></li>
+                    </ul>
                 </li>
                 <li><a th:href="@{/performance?part=0&page=1&slide=no}">주요실적</a>
                 </li>

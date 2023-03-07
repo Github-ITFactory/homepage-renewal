@@ -22,12 +22,12 @@
 				<input type="text" id="detail" placeholder="내용">
 				<input type="password" id="password" placeholder="비밀번호">
 				<input type="file" id="file">
-				<input type="button" id="registBtn" value="등록">
 				<div id="loading">
 					<img th:src="@{/images/loading.gif}" />
 					<span>등록중입니다..잠시만기다려주세요.</span>
 				</div>
 			</div>
+			<input type="button" id="registBtn" value="등록">
 		</section>
 	</div>
 	<th:block th:replace="~{layouts/footer :: footer}"></th:block>

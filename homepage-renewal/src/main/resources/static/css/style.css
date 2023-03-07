@@ -41,24 +41,26 @@ a {
     line-height: 70px;
     box-sizing: border-box;
     background: transparent;
-    transition: .3s ease-in-out;
+    transition: background .3s ease-in-out;
     z-index: 999;
 }
 .header.scrollDown { 
-    background: rgba(255, 255, 255, 1);
-    box-shadow: 0 2px 5px rgba(139, 139, 139, 0.2);
+    background: rgba(5, 5, 5, 0.2);
+    backdrop-filter: blur(50px);
+    /* box-shadow: 0 2px 5px rgba(139, 139, 139, 0.2); */
+    border-bottom: 1px solid #ffffff1e;
 }
-.header.scrollDown a { 
-    color: #333;
+.header.scrollDown > a { 
+    color: #ccc;
 }
 .header.scrollDown .logo img:nth-of-type(1) {
-    opacity: 1;
-}
-.header.scrollDown .logo img:nth-of-type(2) {
     opacity: 0;
 }
+.header.scrollDown .logo img:nth-of-type(2) {
+    opacity: 1;
+}
 .header.scrollDown .mobile-nav .hamburger-btn span {
-    background: #333;
+    background: #ccc;
 }
 .header:hover {
     background: rgba(255, 255, 255, 1);
@@ -108,6 +110,7 @@ a {
     padding: 0 2rem;
     font-weight: 500;
     color: #fff;
+    cursor: pointer;
 }
 .nav .main-depth > li > a::after {
     position: absolute;
@@ -318,8 +321,10 @@ a {
     .mobile-nav .m-sub-depth li a:hover {
         color: #F57E25;
     }
+    /* .mobile-nav .m-sub-depth.active {
+        height: 150px;
+    } */
     .mobile-nav .m-sub-depth.active {
-        /* display: block !important; */
         height: 70px;
     }
 }

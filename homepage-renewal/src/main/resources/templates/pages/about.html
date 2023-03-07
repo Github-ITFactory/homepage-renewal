@@ -23,11 +23,23 @@
                 (주)아이티팩토리는 대한민국의 대표 ICT기업 출신의 풍부한 경험과 경력을 갖춘 우수한 인력과 공공사업에 적용되는 “전자정부 표준프레임워크” 를 기반으로 개발된 안정적이고 혁신적인 ‘비즈니스토털솔루션(Business Total Solution)’을 제공하고 있습니다. <br>
                 저희 (주)아이티팩토리는 중소벤처기업부 등 우리나라 정부에서 주관하는 『스마트공장 및 스마트서비스 정부지원사업』의 공급기업으로 등록되어 저렴한비용으로 다양한 업종과 요구사항을 충족시키는 차별화된 스마트공장을 구축, 지원하고 있습니다. <br>
                 앞으로도 차별적인 최첨단ICT기술과 서비스를 바탕으로 기업의 경쟁력강화와 성장을 지원하는 든든한 파트너가 되도록 전 임직원이 최선을 다하겠습니다.</p>
+            <div id="daumRoughmapContainer1676612472921" class="root_daum_roughmap root_daum_roughmap_landing"></div>
         </section>
         <th:block th:replace="~{layouts/footer :: footer}"></th:block>
     </div>
 	<script defer th:src="@{/js/layouts/header.js}"></script>
     <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js}"></script>
+    <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js}"></script>
+	<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+	<script charset="UTF-8">
+		new daum.roughmap.Lander({
+			"timestamp" : "1676612472921",
+			"key" : "2ds54",
+			// "mapWidth" : "640",
+			// "mapHeight" : "450"
+		}).render();
+	</script>
 	<script th:src="@{/js/pages/about.js}"></script>
+	<script th:src="@{/js/pages/come.js}"></script>
 </body>
 </html>

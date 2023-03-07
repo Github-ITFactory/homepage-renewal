@@ -10,9 +10,10 @@ input:focus {outline:none;}
 	display: flex;
 	width: 100%;
 	height: 100vh;
-	background: #091333;
+	/* background: #091333; */
+	background: url(../images/notice/customers.jpg);
+	background-size: cover;
 }
-
 .container section {
 	position: relative;
 	width: 50%;
@@ -52,6 +53,7 @@ input:focus {outline:none;}
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	opacity: 0;
 	/* animation: view 10s linear both; */
 }
 /* @keyframes view {
@@ -59,10 +61,7 @@ input:focus {outline:none;}
 	100% { transform: scale(1);}
 } */
 .container .contents {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	padding: 10rem 1.5rem 5rem;
+	padding: 7rem 2rem 7rem;
 	width: 50%;
 	height: 100%;
 }
@@ -78,6 +77,15 @@ input:focus {outline:none;}
 	background: none;
 	cursor: pointer;
 } */
+.container .contents .contents-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(50px);
+	border-radius: 10px;
+}
 .container .contents input[type='button'] {
 	position: absolute;
 	bottom: 1rem;
@@ -89,8 +97,9 @@ input:focus {outline:none;}
 	font-size: 1.8rem;
 	border-style: none;
 	border-radius: 3rem;
-	color: #091333;
-	background: #b2b4ca;
+	color: #fff;
+	background: #9293cf56;
+	backdrop-filter: blur(10px);
 	cursor: pointer;
 	transition: box-shadow 0.3s ease-in-out;
 }
@@ -124,7 +133,7 @@ input:focus {outline:none;}
 	text-align: right;
 	font-size: 1.6rem;
 	font-weight: bold;
-	color: #57576e;
+	color: #7f7fa1;
 }
 
 .container .contents .paging {
@@ -153,7 +162,7 @@ input:focus {outline:none;}
 
 /* notice-detail 공지사항 내용 */
 .container .contents .d-notice-title {
-	padding: 2rem 4rem 4rem;
+	padding: 3rem 4rem;
 	font-size: 4rem;
 	color: #fff;
 	border-bottom: 3px solid #f06d02;
@@ -257,16 +266,19 @@ input:focus {outline:none;}
 .container .regist-wrap {
     display: flex;
     justify-content: center;
-    padding: 10rem 2rem 5rem;
+    padding: 7rem 2rem 5rem;
 }
 .container .regist-wrap .regist {
     display: flex;
     padding: 2rem;
     align-items: center;
     flex-direction: column;
-    height: 90%;
+	width: 100%;
+    height: 95%;
     border-radius: 3rem;
-    background: linear-gradient(45deg, #fff,#ffffffad);
+    /* background: linear-gradient(45deg, #fff,#ffffffad); */
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(50px);
 }
 .container .regist #name, .container .regist #email,
 .container .regist #phone,.container .regist #position,
@@ -278,8 +290,9 @@ input:focus {outline:none;}
     font-size: 2rem;
     border-style: none;
     border-radius: 0;
-    border-bottom: 1px solid #0913330f;
+    border-bottom: 1px solid #0913330e;
     background: transparent;
+	color: #e0e0e0;
 }
 .container .regist #file {
     font-size: 1.4rem;
@@ -311,9 +324,9 @@ input:focus {outline:none;}
 }
 
 /* request-deatail 문의글 내용(관리자 로그인) */
-.container .request-detail-wrap {
-	padding: 10rem 4rem 5rem;
-}
+/* .container .request-detail-wrap {
+	padding: 10rem 4rem 7rem;
+} */
 .container .request-detail-wrap table th {
 	padding: 0 2rem;
 	width: 15%;
@@ -396,7 +409,7 @@ input:focus {outline:none;}
 		width: 100%;
 	}
 	.container .contents {
-		padding: 5rem 1.5rem;
+		padding: 5rem 1.5rem 7rem;
 		width: 100%;
 	}
 	.container .contents input[type="button"] {
@@ -416,11 +429,15 @@ input:focus {outline:none;}
 	.container .regist-wrap .regist {
 		margin-bottom: 4rem;
 	}
+	/* 문의사항 디테일 */
+	.container .contents table {
+		margin-bottom: 4rem;
+	}
 }
 /* 460px 이하 */
 @media (max-width: 460px) {
 	.container .contents {
-		padding: 2rem 1.5rem 5rem;
+		padding: 2rem 1.5rem 7rem;
 	}
 	.container .contents table {
 		margin-bottom: 4rem;
