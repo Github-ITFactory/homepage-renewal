@@ -202,7 +202,7 @@
 .performance .content .performance_box:nth-child(4n){margin-right: 0;}
 .performance .content .performance_box .performance_img{ height: 200px; border-radius: 20px;overflow: hidden;border: 1px solid #bbb;box-sizing: border-box;}
 .performance .content .performance_box .performance_img:hover{border: 1px solid #214f92;}
-.performance .content .performance_box .performance_img img{width: 100%;}
+.performance .content .performance_box .performance_img img{width: 100%; height: 100%; object-fit: cover;}
 .performance .content .performance_box .performance_txt p{font-size: 1.6rem;font-weight: 700;margin-top: .5rem;margin-bottom: 0;}
 .performance .content .performance_box .performance_txt span{font-size: 1.6rem;color: #333;margin-top: -.2rem;display: block;}
 

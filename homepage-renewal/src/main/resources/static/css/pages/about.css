@@ -24,7 +24,7 @@
   opacity: 0;
 }
 
-
+/* title section */
 .title-section h3 {
   position: absolute;
   top: 50%;
@@ -67,37 +67,204 @@
   100% { transform: translateY(0rem); }
 }
 
-.contents {
+/* section-1 */
+.section-1 {
   padding: 20rem 10%;
   padding-left: 50%;
   height: 100%;
 }
-.contents p {
+.section-1 p {
     font-size: 2rem;
     line-height: 1.5;
     color: #e0e0e0;
 }
 
+/* section-2 */
+.section-2 {
+  padding: 20rem 5% 0;
+  padding-left: 60%;
+  height: 100%;
+}
+.section-2 .history-wrap {
+  width: 100%;
+  border-left: 1px solid #ffffff2e;
+}
+.section-2 .history-wrap li {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  line-height: 1.5;
+  margin-bottom: 10rem;
+}
+.section-2 .history-wrap li:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+.section-2 .history-wrap li > span {
+  display: inline-block;
+  position: absolute;
+  top: 16px;
+  left: -7px;
+  width: 14px;
+  height: 14px;
+  background: #f06d02;
+  border-radius: 50%;
+}
+.section-2 .history-wrap li h3 {
+  margin-left: -90px;
+  width: 100%;
+  font-size: 3rem;
+  color: #f06d02;
+}
+.section-2 .history-wrap li .history-list {
+  display: flex;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+.section-2 .history-wrap li .history-list .circle {
+  position: relative;
+}
+.section-2 .history-wrap li .history-list .circle span{
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  left: -3px;
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+.section-2 .history-wrap li .history-list .circle h4 {
+  margin: 0 1rem;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: #ffffff80;
+}
+.section-2 .history-wrap li .history-list .article p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+/* section-3 */
+.section-3 {
+  padding: 4rem 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(50px);
+  overflow: hidden;
+}
+.section-3 .section-items {
+  padding: 2rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200%;
+	flex-wrap: nowrap;
+	height: 100%;
+	animation: bannermove 21s linear infinite;
+}
+.section-3 .section-items-2 {
+	animation: bannermove2 21s linear infinite reverse;
+
+}
+@keyframes bannermove {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(-50%, 0);
+	}
+}
+@keyframes bannermove2 {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(-50%, 0);
+	}
+}
+
+.section-3 .section-items li {
+  margin: 0 1rem;
+  width: 250px;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 2px 2px 7px #363535;
+}
+.section-3 .section-items li img {
+  width: 100%;
+}
+
+/* section-4 */
+.section-4 {
+  padding: 10rem;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(50px);
+}
+.section-4 h3 {
+  padding: 2rem 0;
+  font-size: 2.4rem;
+  color: #fff;
+  text-align: center;
+}
+.section-4 .root_daum_roughmap_landing {
+  /* display: flex; */
+  width: 80%;
+  margin: 0 auto;
+}
+.section-4 .root_daum_roughmap .wrap_map {
+  /* height: 400px; */
+  width: 100%;
+}
+
+
 
 /* ################## view ports ################### */
 
+
+/*  1366 이하 */
+@media (max-width: 1366px) {
+	/* section-2 */
+	.section-3 .section-items {
+		width: 250%;
+	}
+}
 /* 1024px 이하 */
 @media (max-width: 1024px) {
   .title-section b {
     font-size: 4vw;
   }
-  .contents p {
+  .section-1 p {
     font-size: 1.6rem;
   }
 
 }
 /* 768px 이하 */
 @media (max-width: 768px) {
-  .contents {
+  .section-1 {
     padding: 10rem 10%;
     padding-left: 10%;
     background: rgba(18, 18, 18, 0.3);
     backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+  }
+  .section-2 {
+    padding: 10rem 10%;
+    padding-left: 20%;
+    background: rgba(18, 18, 18, 0.3);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+  }
+	.section-3 .section-items {
+		width: 450%;
+	}
+  .section-4 {
+    padding: 5rem;
+  }
+  .section-4 .root_daum_roughmap_landing {
+    width: 100%;
   }
 }
 /* 460px 이하 */
@@ -118,6 +285,29 @@
     border-radius: 50%;
     background: #f06d02;
   }
+
+  .section-1 p {
+    font-size: 1.4rem;
+  }
+
+  .section-2 {
+    padding-left: 10%;
+  }
+  .section-2 .history-wrap li h3 {
+    margin-left: 1rem;
+  }
+  .section-2 .history-wrap li .history-list .article p {
+    font-size: 1.4rem;
+  }
+  
+  .section-3 .section-items {
+		width: 900%;
+	}
+  .section-4 {
+    padding: 2rem;
+  }
+
+
 }
 
 /* @@@@@@@@@@@@@@@@@@@ view ports @@@@@@@@@@@@@@@@@@@ */

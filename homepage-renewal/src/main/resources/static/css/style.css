@@ -47,6 +47,7 @@ a {
 .header.scrollDown { 
     background: rgba(5, 5, 5, 0.2);
     backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
     /* box-shadow: 0 2px 5px rgba(139, 139, 139, 0.2); */
     border-bottom: 1px solid #ffffff1e;
 }
@@ -392,7 +393,12 @@ a {
 }
 /* 460px 이하 */
 @media (max-width: 460px) {
-
+    .footer .txt-group p {
+        font-size: 1.4rem;
+    }
+    .footer span {
+        font-size: 1.2rem;
+    }
 }
 
 

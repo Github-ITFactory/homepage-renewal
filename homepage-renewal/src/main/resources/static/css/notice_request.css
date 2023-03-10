@@ -467,7 +467,7 @@ input:focus {outline:none;}
 		padding-right: 0;
 	}
 	.container .contents table .notice-title {
-		font-size: 1.6rem;
+		font-size: 1.4rem;
 	}
 	.container .contents table .notice-date {
 		line-height: 1.5;
@@ -484,13 +484,16 @@ input:focus {outline:none;}
 	/* 공지 디테일 */
 	.container .contents .d-notice-title {
 		padding: 2rem;
-		font-size: 2.2rem;
+		font-size: 1.8rem;
 	}
 	.container .contents .contents-wrap {
 		margin-bottom: 4rem;
 	}
 	.container .contents .contents-wrap .notice-contents {
 		padding: 2rem;
+	}
+	.container .contents .contents-wrap .notice-contents p, .notice-contents p span {
+		font-size: 1.4rem;
 	}
 
 	/* 문의사항 글작성 */
@@ -510,12 +513,12 @@ input:focus {outline:none;}
 	}
 	.container .password-wrap h1 {
 		margin: 10rem 0 5rem;
-		font-size: 2.2rem;
+		font-size: 1.6rem;
 	}
 	.container #password, .container #confirmBtn {
 		margin-bottom: 5rem;
 		line-height: 2;
-		font-size: 1.6rem;
+		font-size: 1.4rem;
 	}
 	.container #password {
 		width: 20vw;
@@ -524,11 +527,11 @@ input:focus {outline:none;}
 	.container .request-detail-wrap table td {
 		height: 7vh;
 		line-height: 7vh;
-		font-size: 1.6rem;
+		font-size: 1.4rem;
 	}
 	.container .request-detail-wrap table th {
 		width: 70px;
-		font-size: 1.6rem;
+		font-size: 1.4rem;
 	}
 }
 

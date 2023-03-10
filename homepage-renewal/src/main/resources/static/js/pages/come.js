@@ -14,9 +14,9 @@ $(function(){
 	slider = this.getElementById("slider");
 	winResize();
 	$(window).bind({resize: winResize, scroll: winScroll});
-	if(slide !== 'no') {
-		window.scrollTo(0, window.innerHeight - 70);		
-	}
+	// if(slide !== 'no') {
+	// 	window.scrollTo(0, window.innerHeight - 70);		
+	// }
 });
 function winResize(){
 	ovf.style.top = slider.offsetHeight + "px";

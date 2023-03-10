@@ -186,6 +186,9 @@
     gap: 1rem;
     text-align: center;
   }
+  .contents .contents-list a {
+    font-size: 1.4rem;
+  }
   .contents .contents-items-wrap .content-item {
     width: 100%;
     height: 160px;
