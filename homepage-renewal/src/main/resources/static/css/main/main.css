@@ -150,9 +150,9 @@ body {
 	transition: 0.3s cubic-bezier(0, 0.51, 0.58, 1);
 	overflow: hidden;
 }
-.section-2 .second-section .section-wrap .section-items li:hover {
+/* .section-2 .second-section .section-wrap .section-items li:hover {
 	transform: translateY(-15px);
-}
+} */
 .section-2 .second-section .section-wrap .section-items li.item-1{
 	background: #e76704;
 }

@@ -84,6 +84,7 @@ input:focus {outline:none;}
 	height: 100%;
 	background: rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
 	border-radius: 10px;
 }
 .container .contents input[type='button'] {
@@ -100,6 +101,7 @@ input:focus {outline:none;}
 	color: #fff;
 	background: #9293cf56;
 	backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 	cursor: pointer;
 	transition: box-shadow 0.3s ease-in-out;
 }
@@ -279,6 +281,7 @@ input:focus {outline:none;}
     /* background: linear-gradient(45deg, #fff,#ffffffad); */
 	background: rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
 }
 .container .regist #name, .container .regist #email,
 .container .regist #phone,.container .regist #position,
