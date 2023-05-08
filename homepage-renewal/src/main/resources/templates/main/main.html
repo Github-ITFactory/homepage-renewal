@@ -14,6 +14,17 @@
 
 <body>
   <th:block th:replace="~{layouts/header :: header}"></th:block>
+  <!-- 팝업 -->
+  <div class="home-popup">
+    <div id="agreePopup" class="agree-popup-frame">
+      <div class="agree-popup-inner">
+        <a href="javascript:todayClose('agreePopup', 1);" class="today-x-btn">오늘하루닫기</a>
+        <a href="javascript:fadeOutPop('agreePopup');" class="x-btn">닫기</a>
+        <a th:href="@{https://blog.naver.com/smart_haccp/223087821919}" class="use-btn" target="_blank"><img th:src="@{/images/main/main-pop.png}"/></a>
+      </div>
+    </div>
+  </div>
+  <!-- 팝업끝 -->
   <section class="section-1 main-section">
     <div class="first-section top-banner">
       <video th:poster="@{/images/main/top-video.jpg}" muted autoplay loop>
@@ -164,6 +175,58 @@
   <script defer th:src="@{/js/layouts/header.js}"></script>
   <script defer th:src="@{/js/main/main.js}"></script>
   <script th:src="@{https://unpkg.com/aos@2.3.1/dist/aos.js}"></script>
+  <script>
+// * today popup close
+  todayOpen('agreePopup');
+  // 창열기  
+  function todayOpen(winName) {
+    var blnCookie = getCookie(winName);
+    var obj = eval("window." + winName);
+    console.log(blnCookie);
+    if (!blnCookie) {
+      obj.style.display = "block";
+    } else {
+      obj.style.display = "none";
+    };
+  }
+  // 창닫기  
+  function todayClose(winName, expiredays) {
+    setCookie(winName, "expire", expiredays);
+    var obj = eval("window." + winName);
+    obj.style.display = "none";
+  }
+
+  function fadeOutPop(winName){
+    var obj = document.getElementById(winName);
+    obj.style.display = "none";
+  }
+  
+  // 쿠키 가져오기  
+  function getCookie(name) {
+    var nameOfCookie = name + "=";
+    var x = 0;
+    while (x <= document.cookie.length) {
+      var y = (x + nameOfCookie.length);
+      if (document.cookie.substring(x, y) == nameOfCookie) {
+      if ((endOfCookie = document.cookie.indexOf(";", y)) == -1)
+        endOfCookie = document.cookie.length;
+      return unescape(document.cookie.substring(y, endOfCookie));
+      }
+      x = document.cookie.indexOf(" ", x) + 1;
+      if (x == 0)
+      break;
+    };
+    return "";
+  }
+  
+    // 24시간 기준 쿠키 설정하기  
+    // 만료 후 클릭한 시간까지 쿠키 설정  
+    function setCookie(name, value, expiredays) {
+      var todayDate = new Date();
+      todayDate.setDate(todayDate.getDate() + expiredays);
+      document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+    }
+ </script>
 </body>
 
 

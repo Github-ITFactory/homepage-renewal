@@ -33,6 +33,7 @@ observer.observe(leftWrap);
 observer.observe(leftWrap[0]);
 
 
+
 /**
  * XMLHttpRequest 성공 함수
  */
