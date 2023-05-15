@@ -26,6 +26,39 @@ function winScroll(){
 }
 
 
+var mapContainer2 = document.getElementById('map2'),
+		mapOption2 = { 
+		center: new kakao.maps.LatLng(35.8660015 , 128.6010232),
+		level: 3 
+		};
+	var mapContainer = document.getElementById('map'),
+		mapOption = { 
+		center: new kakao.maps.LatLng(37.2874529 , 127.0602648), 
+		level: 3 
+		};
+
+	var map2 = new kakao.maps.Map(mapContainer2, mapOption2); 
+	var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+	// 마커가 표시될 위치입니다 
+	var markerPosition2  = new kakao.maps.LatLng(35.8660015, 128.6010232); 
+	var markerPosition  = new kakao.maps.LatLng(37.2874529, 127.0602648); 
+
+	// 마커를 생성합니다
+	var marker2 = new kakao.maps.Marker({
+		position: markerPosition2
+	});
+	var marker = new kakao.maps.Marker({
+		position: markerPosition
+	});
+
+	// 마커가 지도 위에 표시되도록 설정합니다
+	marker2.setMap(map2);
+	marker.setMap(map);
+
+	// 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+	// marker.setMap(null);    
+
 
 
 /**
