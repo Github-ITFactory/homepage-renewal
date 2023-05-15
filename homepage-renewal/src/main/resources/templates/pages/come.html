@@ -12,27 +12,69 @@
 </head>
 <body>
 	<th:block th:replace="~{layouts/header :: header}"></th:block>
-	<section id="slider" class="title-section">
-		<h3><b>오시는 길</b><br> 기업혁신의 <br>든든한 ICT파트너 </h3>
-		<img th:src="@{images/pages/about/about2.jpg}" alt="background-images">
-		<span><i class="xi-long-arrow-down"></i></span>
+	<div class="top-bg"></div>
+	<section class="contents">
+		<h3>Contact Us</h3>
+		<div class="map-wrap">
+			<div id="map2" class="map"></div>
+			<div class="text-wrap">
+				<h4>대구 아지트</h4>
+				<p>
+					주소: (41940) 대구광역시 중구 공평로 26-20 <br>
+					T : 053-743-0709 <br>
+					F : 053-746-0709
+				</p>
+			</div>
+		</div>
+		<div class="map-wrap">
+			<div id="map" class="map"></div>
+			<div class="text-wrap">
+				<h4>광교 아지트</h4>
+				<p>
+					주소 : 수원시 영통구 광교중앙로 170  <br>
+					T : 0502-0112-1000
+				</p>
+			</div>
+		</div>
 	</section>
-	<div id="overflow">
-		<section class="contents">
-			<div id="daumRoughmapContainer1676612472921" class="root_daum_roughmap root_daum_roughmap_landing"></div>
-		</section>
-        <th:block th:replace="~{layouts/footer :: footer}"></th:block>
-	</div>
+	<th:block th:replace="~{layouts/footer :: footer}"></th:block>
 	<script defer th:src="@{/js/layouts/header.js}"></script>
 	<script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js}"></script>
-	<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	3640c1078b523a0c937d56487f1f0ec8"></script>
 	<script charset="UTF-8">
-		new daum.roughmap.Lander({
-			"timestamp" : "1676612472921",
-			"key" : "2ds54",
-			// "mapWidth" : "640",
-			// "mapHeight" : "450"
-		}).render();
+
+		var mapContainer2 = document.getElementById('map2'),
+    		mapOption2 = { 
+        	center: new kakao.maps.LatLng(35.8660015 , 128.6010232),
+        	level: 3 
+  			};
+		var mapContainer = document.getElementById('map'),
+    		mapOption = { 
+        	center: new kakao.maps.LatLng(37.2874529 , 127.0602648), 
+        	level: 3 
+  			};
+
+		var map2 = new kakao.maps.Map(mapContainer2, mapOption2); 
+		var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+		// 마커가 표시될 위치입니다 
+		var markerPosition2  = new kakao.maps.LatLng(35.8660015, 128.6010232); 
+		var markerPosition  = new kakao.maps.LatLng(37.2874529, 127.0602648); 
+
+		// 마커를 생성합니다
+		var marker2 = new kakao.maps.Marker({
+			position: markerPosition2
+		});
+		var marker = new kakao.maps.Marker({
+			position: markerPosition
+		});
+
+		// 마커가 지도 위에 표시되도록 설정합니다
+		marker2.setMap(map2);
+		marker.setMap(map);
+
+		// 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+		// marker.setMap(null);    
 	</script>
 	<script th:src="@{/js/pages/come.js}"></script>
 </body>

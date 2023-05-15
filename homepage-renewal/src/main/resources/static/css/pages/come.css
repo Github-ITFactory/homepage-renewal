@@ -1,129 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-#slider {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  overflow: hidden;
-}
-#slider img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  animation: view 10s linear both;
-}
-@keyframes view {
-  0% { transform: scale(1);}
-  100% { transform: scale(1.2);}
-}
-#overflow {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  opacity: 0;
-}
 
-
-.title-section h3 {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  transform: translateY(-50%);
-  letter-spacing: -.2rem;
-  font-size: 4.2vw;
-  color: rgba(255, 255, 255, 1);
-  z-index: 1;
-  animation: fadein 2s linear both;
-  font-family: 'Do Hyeon', sans-serif;
+.top-bg{
+    background-color: #000;
+    width: 100%;
+    height: 70px;
 }
-.title-section b {
-  display: block;
-  position: relative;
-  font-size: 2.8vw;
-}
-.title-section b::after {
-  position: absolute;
-  content: '';
-  top: -3rem;
-  left: -1rem;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #f06d02;
-}
-.title-section span {
-  position: absolute;
-  bottom: 5%;
-  left: 10%;
-  transform: translateX(-50%);
-  font-size: 8rem;
-  color: #fff;
-  animation: moving .5s cubic-bezier(0.63, -0.1, 1, 0.44) infinite alternate-reverse;
-}
-
-
-@keyframes moving {
-  0% { transform: translateY(-2rem); }
-  100% { transform: translateY(0rem); }
-}
-
 .contents {
-  padding: 20rem 10%;
-  padding-left: 50%;
-  height: 100%;
+    padding: 0 15%;
+    height: 100vh;
 }
-.contents p {
-    font-size: 2rem;
+.contents h3 {
+    align-self: self-start;
+    font-size: 3.2rem;
+    padding: 80px 0 40px;
+}
+.contents .map-wrap {
+    display: flex;
+    width: 100%;
+    margin: 20px 0;
+}
+.contents .map-wrap #map , #map2 {
+    width: 50%;
+    height: 300px;
+    border: 1px solid #000;
+}
+.contents .map-wrap .text-wrap {
+    padding: 0  40px;
+}
+.contents .map-wrap .text-wrap h4 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+.contents .map-wrap .text-wrap p {
+    font-size: 1.6rem;
     line-height: 1.5;
-    color: #e0e0e0;
 }
-.contents .root_daum_roughmap_landing {
-  width: 100%;
-}
-.contents .root_daum_roughmap .wrap_map {
-  height: 400px;
-}
-
-
-
-
 /* ################## view ports ################### */
 
 /* 1024px 이하 */
 @media (max-width: 1024px) {
-  .title-section b {
-    font-size: 4vw;
-  }
-  .contents p {
-    font-size: 1.6rem;
-  }
+    .contents {
+        padding: 0 5%;
+        height: 100%;
+    }
 }
 /* 768px 이하 */
 @media (max-width: 768px) {
-  .contents {
-    padding: 10rem 10%;
-    padding-left: 10%;
-  }
+    .contents {
+        /* padding: 0 15%; */
+        width: 70%;
+        margin: 0 auto;
+        height: 100%;
+    }
+    .contents h3 {
+        align-self: self-start;
+        font-size: 3.2rem;
+        padding: 40px 0;
+    }
+    .contents .map-wrap {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 20px 0;
+    }
+    .contents .map-wrap #map , #map2 {
+        width: 100%;
+        height: 300px;
+        border: 1px solid #000;
+    }
+    .contents .map-wrap .text-wrap {
+        padding: 10px  0px;
+    }
 }
 /* 460px 이하 */
-@media (max-width: 460px) {
-  .title-section h3 {
-    font-size: 3rem;
-  }
-  .title-section b {
-    font-size: 3rem;
-  }
-  .title-section b::after {
-    position: absolute;
-    content: '';
-    top: -3rem;
-    left: -1rem;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #f06d02;
-  }
+@media (max-width: 640px) {
+    .contents {
+        padding: 0 2%;
+        width: 100%;
+        height: 100%;
+    }
+    .contents h3 {
+        align-self: self-start;
+        font-size: 2.4rem;
+        padding: 20px 2%;
+    }
+    .contents .map-wrap {
+        width: 94%;
+        margin: 20px auto;
+    }
+    .contents .map-wrap .text-wrap p {
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
 }
 
 /* @@@@@@@@@@@@@@@@@@@ view ports @@@@@@@@@@@@@@@@@@@ */

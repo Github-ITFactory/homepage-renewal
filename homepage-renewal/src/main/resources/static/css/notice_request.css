@@ -313,6 +313,29 @@ input:focus {outline:none;}
     z-index: 99;
     text-align: center;
 }
+.container .regist .personal-info {
+	margin-top: 80px;
+	padding: 20px;
+	width: 100%;
+	/* border: 1px solid #ffffff3f; */
+	border-radius: 5px;
+	background-color: #ffffff2f;
+}
+.container .regist .personal-info h4 {
+	padding: 0px 0px 4px;
+	display: inline-block;
+	font-size: 18px;
+	/* border-bottom: 2px solid #f06d02; */
+	color: #fff;
+}
+.container .regist .personal-info p{
+	margin-top: 10px;
+	font-size: 1.6rem;
+	line-height: 2.8rem;
+	font-weight: 200;
+	color: #fff;
+}
+
 .container .regist #loading > img {
     position: absolute;
     top: 50%;

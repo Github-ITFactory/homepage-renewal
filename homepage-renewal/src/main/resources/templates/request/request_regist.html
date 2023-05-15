@@ -24,12 +24,23 @@
 				<input type="text" id="detail" placeholder="내용">
 				<input type="password" id="password" placeholder="비밀번호">
 				<input type="file" id="file">
-				<div id="loading">
+				<div class="personal-info">
+					<h4>개인정보 수집, 이용 동의서</h4>
+					<p>
+						- 개인정보 수집, 이용 안내 -<br>
+						고객상담, 제휴 제안 및 컨설팅 상담을 위해서는 아래와 같이 개인정보를 수집, 이용합니다.	<br>
+						1. 개인정보 수집 목적: 고객상담, 제휴제안 안내를 전달 <br>
+						2. 개인정보 수집 항목 : 이름, 이메일 , 연락처 , 직책 <br>
+						3. 보유 및 이용기간 : 수집일로부터 1년 개인정보 관리 책임자를 통해 삭제를 요구할  수 있습니다. <br>
+						* 위 개인정보 수집, 이용에 동의 합니다. ( * 필수 )
+					</p>
+				</div>
+				<div id="loading">	
 					<img th:src="@{/images/loading.gif}" />
 					<span>등록중입니다..잠시만기다려주세요.</span>
 				</div>
 			</div>
-			<input type="button" id="registBtn" value="등록">
+			<input type="button" id="registBtn" value="동의하고 등록">
 		</section>
 	</div>
 	<th:block th:replace="~{layouts/footer :: footer}"></th:block>

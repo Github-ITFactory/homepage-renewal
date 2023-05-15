@@ -49,3 +49,7 @@ button {
 	background: transparent;
 	cursor: pointer;
 }
+
+em {
+	font-style: normal;
+}
